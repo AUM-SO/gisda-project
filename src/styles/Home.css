@@ -1,8 +1,20 @@
+h1,
+h2,
+h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+p {
+    font-family: 'Poppins', sans-serif;
+}
+
 .header {
     background-image: url("/public//img/5ec2884b2e35c375b7b912a2.jpg");
-
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
-    height: 25em;
+    height: 60em;
     /* border: solid; */
 }
 
@@ -11,16 +23,30 @@
     height: 45%;
     justify-content: center;
     align-items: center;
-    ;
+    margin-top: -10px;
+    color: white;
 }
 
-.header p {
+.header h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: white;
     /* border: solid; */
 
 }
+
+/* .header .ph{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: solid;
+} */
 
 .content1 {
     /* border: solid; */
@@ -60,8 +86,8 @@
     height: 100%;
     margin-left: auto;
     margin-right: auto;
-   
-    
+
+
     /* border: solid; */
 
 }
@@ -185,7 +211,7 @@
 
 .content2 {
     /* border: solid; */
-    margin: 1rem;
+    /* margin: 1rem; */
 }
 
 .content2 .grids1 {
@@ -194,77 +220,138 @@
 }
 
 .content2 .grids1 .grid4 {
-    align-items: start;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     /* border: solid; */
 }
 
 .content2 .grids1 .grid4 .imgicon1 {
-    border: solid;
-    background: url("/public/img/5ec2884b2e35c375b7b912a2.jpg");
-    width: 20vw;
-    height: 20vh;
+    /* border: 1px solid; */
+    width: 15vw;
+    height: 15;
     margin: 1rem;
     border: 1px solid #F3F3F3;
-    filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.67));
+    filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.17));
     border-radius: 12px;
+    box-sizing: border-box;
+    text-align: center;
+
 }
 
+.imgicon1 .FaHiking {
+    /* border: 1px solid; */
+    color: #46D68C;
+    font-size: 400%;
+    text-align: center;
+    margin: 10% 10% 10% 10%;
+}
+
+
 .content2 .grids1 .grid4 .imgicon2 {
-    border: solid;
-    background: url("/public/img/85964ae7-3361-431a-a029-486f6216699e.jpg");
-    width: 20vw;
-    height: 20vh;
+    /* border: 1px solid; */
+    width: 15vw;
+    height: 15;
     margin: 1rem;
     border: 1px solid #F3F3F3;
-    filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.67));
+    filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.17));
     border-radius: 12px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.imgicon2 .FaGasPump {
+    /* border: 1px solid; */
+    color: #46D68C;
+    font-size: 400%;
+    text-align: center;
+    margin: 10% 10% 10% 10%;
 }
 
 .content2 .grids1 .grid4 .imgicon3 {
-    border: solid;
-    background: url("/public/img/acf3e8ce-a7d5-4ed6-aefe-33b14a4e97b1.jpg");
-    width: 20vw;
-    height: 20vh;
+    /* border: 1px solid; */
+    width: 15vw;
+    height: 15;
     margin: 1rem;
     border: 1px solid #F3F3F3;
-    filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.67));
+    filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.17));
     border-radius: 12px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.imgicon3 .BsMap {
+    /* border: 1px solid; */
+    color: #46D68C;
+    font-size: 400%;
+    text-align: center;
+    margin: 10% 10% 10% 10%;
 }
 
 .content2 .grids1 .grid4 .imgicon4 {
-    border: solid;
-    background: url("/public/img/ae57043e-c292-456a-8c2e-6bb9e063ad1f.jpg");
-    width: 20vw;
-    height: 20vh;
+    /* border: 1px solid; */
+    width: 15vw;
+    height: 15;
     margin: 1rem;
     border: 1px solid #F3F3F3;
-    filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.67));
+    filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.17));
     border-radius: 12px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.imgicon4 .MdBed {
+    /* border: 1px solid; */
+    color: #46D68C;
+    font-size: 400%;
+    text-align: center;
+    margin: 10% 10% 10% 10%;
 }
 
 .content2 .grids1 .grid4 .imgicon5 {
-    border: solid;
-    background: url("/public/img/DSC02241-1024x683.jpg");
-    width: 20vw;
-    height: 20vh;
+    /* border: 1px solid; */
+    width: 15vw;
+    height: 15;
     margin: 1rem;
     border: 1px solid #F3F3F3;
-    filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.67));
+    filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.17));
     border-radius: 12px;
+    box-sizing: border-box;
+    text-align: center;
 
 }
 
+.imgicon5 .GiMountainCave {
+    /* border: 1px solid; */
+    color: #46D68C;
+    font-size: 400%;
+    text-align: center;
+    margin: 10% 10% 10% 10%;
+}
+
 .content2 .grids1 .grid4 .imgicon6 {
-    border: solid;
-    background: url("/public/img/เขาระเบิด.png");
-    width: 20vw;
-    height: 20vh;
+    /* border: 1px solid; */
+    width: 15vw;
+    height: 15;
     margin: 1rem;
     border: 1px solid #F3F3F3;
-    filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.67));
+    filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.17));
     border-radius: 12px;
+    box-sizing: border-box;
+    text-align: center;
+}
 
+.imgicon6 .IoMdCar {
+    /* border: 1px solid; */
+    color: #46D68C;
+    font-size: 400%;
+    text-align: center;
+    margin: 10% 10% 10% 10%;
+}
 
+.centerh {
+    margin-left: 5%;
 }
 
 .content2 .grids1 .centerh button {
@@ -296,12 +383,15 @@
     height: 5vh;
     width: 150px;
 
+
     margin: 0;
     position: absolute;
     top: 80%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+
+
 
 
 
@@ -319,8 +409,8 @@
     margin-left: 5%;
     text-align: right;
     float: right;
-    
-    
+
+
 
 }
 
@@ -383,12 +473,14 @@
     border-radius: 20px;
 }
 
-
+.grids2 {
+    height: 20rem;
+    /* border: solid; */
+    margin-top: 10%;
+}
 
 .grids2 .foter button {
     /* border: solid; */
-
-
     height: 5vh;
     width: 150px;
     margin-left: 5%;
@@ -421,4 +513,10 @@
     /* border: solid; */
     margin-left: 5%;
     margin-right: 5%;
+}
+
+.icon {
+    height: 200px;
+    width: 200px;
+
 }

@@ -2,7 +2,12 @@ import { Rate } from "antd";
 import React from "react";
 import { Col, Row } from "react-grid-system";
 import { EnvironmentOutlined } from "@ant-design/icons";
-// import "@flaticon/flaticon-uicons/css/all";
+import { FaGasPump, FaHiking } from "react-icons/fa";
+
+import { MdBed } from "react-icons/md";
+import { BsMap } from "react-icons/bs";
+import { GiMountainCave } from "react-icons/gi";
+import { IoMdCar } from "react-icons/io";
 import "../styles/Home.css";
 
 const Home = () => {
@@ -10,12 +15,15 @@ const Home = () => {
     <>
       <div class="header">
         <h1>Trekking in EEC</h1>
-        <p>
+        <div className="ph">
+          <h3>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
           est sit illo! Repudiandae, libero quidem. Omnis laborum quod, tenetur
           rerum, harum nisi dolor deserunt perferendis quaerat nostrum quia,
-          aspernatur odit!
-        </p>
+          aspernatur odit! Hiking is a long, vigorous walk, usually on trails or
+          footpaths in the countryside.
+        </h3></div>
+        
         <button className="bt1">details more</button>
       </div>
       <div class="content1">
@@ -29,11 +37,10 @@ const Home = () => {
               </p>
             </div>
           </Col>
-          <Col >
+          <Col>
             <div className="bt2">
-            <button >View All</button>
+              <button>View All</button>
             </div>
-            
           </Col>
         </Row>
 
@@ -42,7 +49,7 @@ const Home = () => {
             <Col sm={4}>
               <div class="grid1">
                 <img
-                  src="https://reactjs.org/logo-og.png"
+                  src="./img/DSC02241-1024x683.jpg"
                   alt="React Logo"
                   width={240}
                 />
@@ -53,8 +60,8 @@ const Home = () => {
                     <Col sm={1}>
                       <EnvironmentOutlined />
                     </Col>
-                    <Col sm={1}>
-                      <p>Barcelona, España</p>
+                    <Col sm={4}>
+                      <p>เขาระเบิด</p>
                     </Col>
                   </Row>
                 </div>
@@ -73,7 +80,7 @@ const Home = () => {
             <Col sm={4}>
               <div class="grid2">
                 <img
-                  src="https://reactjs.org/logo-og.png"
+                  src="./img/ae57043e-c292-456a-8c2e-6bb9e063ad1f.jpg"
                   alt="React Logo"
                   width={240}
                 />
@@ -83,8 +90,8 @@ const Home = () => {
                     <Col sm={1}>
                       <EnvironmentOutlined />
                     </Col>
-                    <Col sm={1}>
-                      <p>Barcelona, España</p>
+                    <Col sm={4}>
+                      <p>เขาแหลม</p>
                     </Col>
                   </Row>
                 </div>
@@ -102,7 +109,7 @@ const Home = () => {
             <Col sm={4}>
               <div class="grid3">
                 <img
-                  src="https://reactjs.org/logo-og.png"
+                  src="./img/85964ae7-3361-431a-a029-486f6216699e.jpg"
                   alt="React Logo"
                   width={240}
                 />
@@ -112,8 +119,8 @@ const Home = () => {
                     <Col sm={1}>
                       <EnvironmentOutlined />
                     </Col>
-                    <Col sm={1}>
-                      <p>Barcelona, España</p>
+                    <Col sm={4}>
+                      <p>ผาหินกูบ</p>
                     </Col>
                   </Row>
                 </div>
@@ -133,7 +140,7 @@ const Home = () => {
         <div class="content2">
           <div className="grids1">
             <Row>
-              <Col sm={3}>
+              <Col sm={4}>
                 <div className="centerh">
                   <h1>Trekking for you</h1>
                   <p>
@@ -149,23 +156,47 @@ const Home = () => {
               <Col sm={8}>
                 <div class="grid4">
                   <Row>
-                    <Col sm={4}>
-                      <div className="imgicon1" />
+                    <Col xs={4}>
+                      <div className="imgicon1">
+                        <div className="FaHiking">
+                          <FaHiking />
+                        </div>
+                      </div>
                     </Col>
-                    <Col sm={4}>
-                      <div className="imgicon2" />
+                    <Col xs={4}>
+                      <div className="imgicon2">
+                        <div className="FaGasPump">
+                          <FaGasPump />
+                        </div>
+                      </div>
                     </Col>
-                    <Col sm={4}>
-                      <div className="imgicon3" />
+                    <Col xs={4}>
+                      <div className="imgicon3">
+                        <div className="BsMap">
+                          <BsMap />
+                        </div>
+                      </div>
                     </Col>
-                    <Col sm={4}>
-                      <div className="imgicon4" />
+                    <Col xs={4}>
+                      <div className="imgicon4">
+                        <div className="MdBed">
+                          <MdBed />
+                        </div>
+                      </div>
                     </Col>
-                    <Col sm={4}>
-                      <div className="imgicon5" />
+                    <Col xs={4}>
+                      <div className="imgicon5">
+                        <div className="GiMountainCave">
+                          <GiMountainCave />
+                        </div>
+                      </div>
                     </Col>
-                    <Col sm={4}>
-                      <div className="imgicon6" />
+                    <Col xs={4}>
+                      <div className="imgicon6">
+                        <div className="IoMdCar">
+                          <IoMdCar />
+                        </div>
+                      </div>
                     </Col>
                   </Row>
                 </div>
