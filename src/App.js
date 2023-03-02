@@ -1,15 +1,14 @@
-
-import './App.css';
-import Footer from './components/Footer';
-import Home from './pages/Home.js';
-
+import "./App.css";
+import Footer from "./components/Footer";
+import Home from "./pages/Home.js";
+import Navbar from "./components/Navbar";
 function App() {
   return (
-   <>
-      <Home/>
-      <Footer/>
-   </>
-
+    <>
+      <Navbar />
+      <Home />
+      <Footer />
+    </>
   );
 }
 

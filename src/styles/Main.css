@@ -1,0 +1,121 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-main {
+    height: 1473px;
+    /* border: 1px solid red; */
+    display: flex;
+
+}
+
+.content-left {
+    font-family: 'Poppins', sans-serif;
+    width: 500px;
+    height: 867px;
+    /* border: 1px solid red; */
+    padding: 100px;
+    display: block;
+    justify-content: center;
+    margin-top: -80px;
+    
+}
+
+.search {
+    padding: 10px;
+    position: relative;
+    width: 233px;
+    height: 40px;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: #F5F5F5;
+    box-shadow: inset;
+    margin-left: -10px;
+    margin-bottom: 20px;
+
+}
+.icon-search{
+    position: absolute;
+    top: 20%;
+    right: 30%;
+
+}
+
+.search .placeholder {
+    margin-left: 5px;
+}
+
+.labelcheck {
+    margin-left: 10px;
+}
+.content-left .provice,.distant,.level{
+    margin-top: 20px;
+}
+
+.content-right {
+    padding: 100px;
+    /* border: 1px solid red; */
+    margin-top: -80px;
+}
+.title-cardheader{
+    padding: 5px;
+    
+}
+.favorite-trekking {
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.CardAll {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    /* border: 1px solid red; */
+}
+
+.card1 {
+    position: relative;
+    margin-left: 10px;
+}
+
+.detail1 {
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+.vector1{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+.card2 {
+    position: relative;
+}
+
+.detail2 {
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+.vector2{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+}
+.card3 {
+    position: relative;
+}
+
+.detail3 {
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+.vector3{
+    position: absolute;
+    top: 30%;
+    left: 20%;
+}
