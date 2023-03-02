@@ -1,13 +1,13 @@
 import "./App.css";
-import Footer from "./components/Footer";
-import Home from "./pages/Home.js";
+
 import Navbar from "./components/Navbar";
+import Login from "./components/Login"
+
 function App() {
   return (
     <>
       <Navbar />
-      <Home />
-      <Footer />
+      
     </>
   );
 }

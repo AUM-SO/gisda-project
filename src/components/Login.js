@@ -1,7 +1,7 @@
 import React from "react"
 import { BrowserRouter } from 'react-router-dom'
 
-import '/reactweb/src/styles/Login.css'
+import '../styles/Login.css'
 
 function Login() {
     return (
