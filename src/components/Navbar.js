@@ -8,7 +8,7 @@ import Home from '../pages/Home'
 import Trekking from '../pages/Trekking'
 import Contact from '../pages/Contact'
 import Abouts from '../pages/Abouts'
-import Login from './Login'
+import Login from '../components/Login'
 import Signup from '../components/Signup'
 
 

@@ -9,6 +9,12 @@ p {
     font-family: 'Poppins', sans-serif;
 }
 
+* {
+    box-sizing: 0;
+    margin: 0;
+    padding: 0;
+}
+
 .header {
     background-image: url("/public//img/5ec2884b2e35c375b7b912a2.jpg");
     background-repeat: no-repeat;
@@ -19,12 +25,16 @@ p {
 }
 
 .header h1 {
-    display: flex;
     height: 45%;
+    width: 100%;
+
+    display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: -10px;
+    align-items: end;
+
     color: white;
+    font-size: 12rem;
+    font-weight: bold;
 }
 
 .header h3 {
@@ -33,20 +43,30 @@ p {
     align-items: center;
     margin-left: 5%;
     margin-right: 5%;
+    font-weight: lighter;
+
     color: white;
     /* border: solid; */
 
 }
 
-/* .header .ph{
+.header .ph {
+    height: 12vh;
+    width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+
+
+
     color: white;
-    margin-left: 5%;
-    margin-right: 5%;
-    border: solid;
-} */
+
+
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
 
 .content1 {
     /* border: solid; */
@@ -55,15 +75,28 @@ p {
     border-radius: 10px;
 }
 
+
+.rowheader {
+    height: 20vh;
+    width: 100%;
+    margin: 10rem 0 0 10rem;
+
+
+}
+
 .content1 .rowheader h1 {
 
     /* border: solid; */
+    font-size: 3rem;
     margin-left: 5%;
+    margin-top: 10%;
 }
 
 .content1 .rowheader p {
     /* border: solid; */
-    margin-left: 5%;
+    margin-left: 6%;
+    margin-top: 1rem;
+    color: #444343;
 }
 
 .grids .grid1 h2 {
@@ -209,10 +242,7 @@ p {
 
 
 
-.content2 {
-    /* border: solid; */
-    /* margin: 1rem; */
-}
+
 
 .content2 .grids1 {
     /* border: solid; */
@@ -330,26 +360,6 @@ p {
     margin: 10% 10% 10% 10%;
 }
 
-.content2 .grids1 .grid4 .imgicon6 {
-    /* border: 1px solid; */
-    width: 15vw;
-    height: 15;
-    margin: 1rem;
-    border: 1px solid #F3F3F3;
-    filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.17));
-    border-radius: 12px;
-    box-sizing: border-box;
-    text-align: center;
-}
-
-.imgicon6 .IoMdCar {
-    /* border: 1px solid; */
-    color: #46D68C;
-    font-size: 400%;
-    text-align: center;
-    margin: 10% 10% 10% 10%;
-}
-
 .centerh {
     margin-left: 5%;
 }
@@ -371,32 +381,19 @@ p {
 
 
 
-
-
-
-
-
+.btn_titlse {
+    height: 10vh;
+    width: auto;
+    margin-top: 3rem;
+    text-align: center;
+}
 
 
 .bt1 {
 
-    height: 5vh;
-    width: 150px;
-
-
-    margin: 0;
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-
-
-
-
-
-
-    margin-bottom: 10%;
+    height: 4vh;
+    width: 120px;
+    margin-bottom: 12%;
     border: 2px solid #FFFFFF;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 30px;
@@ -404,26 +401,36 @@ p {
 
 .bt2 {
     /* border: solid; */
-    margin-top: 20%;
+    margin-top: 11.5rem;
     margin-right: 5%;
     margin-left: 5%;
     text-align: right;
     float: right;
 
+}
 
+
+
+
+.bt2 button {
+    height: 3vh;
+    width: 90px;
+    margin-top: 10px;
+    margin-right: 138px;
+    border: 1px solid #FDFDFD;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 20px;
+    background-color: white;
+    letter-spacing: 1px;
 
 }
 
-.bt2 button {
-    height: 5vh;
-    width: 120px;
-
-
-
-    border: 2px solid #FDFDFD;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 20px;
-
+.bt2 button:hover {
+    color: #ffffff;
+    background-color: rgb(23, 23, 23);
+    transition: 0.3s;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .bt3 {
@@ -519,4 +526,204 @@ p {
     height: 200px;
     width: 200px;
 
+}
+
+
+/*APIRAK DAV*/
+
+.content2 {
+    height: 50rem;
+    width: 100%;
+    /*  background-color: #3E8AFD; */
+    /* border: red 1px solid; */
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.cardDetlis {
+    height: 65vh;
+    width: 27rem;
+    margin: 2rem 2.5rem;
+
+
+    background-color: white;
+    border-radius: 20px;
+
+    overflow: hidden;
+    display: inline-block;
+    /* border: red 1px solid; */
+
+
+}
+
+
+.container_img {
+    height: 60%;
+    width: 100%;
+    background-color: #86786c;
+    display: none;
+}
+
+.content3 {
+    height: 40rem;
+    width: 100%;
+    
+
+    border: red 1px solid;
+}
+
+.sizeimg {
+    height: 20rem;
+    width: 100%;
+}
+
+.card {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.imgincard1 {
+    background-image: url(/public/img/mountaincard.jpg);
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+
+}
+
+.imgincard2 {
+    background-image: url(/public/img/85964ae7-3361-431a-a029-486f6216699e.jpg);
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+}
+
+.imgincard3 {
+    background-image: url(/public/img/mountaincard2.png);
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+
+}
+
+.zoom {
+    transition: transform .5s;
+    /* Animation */
+
+}
+
+.zoom:hover {
+    transform: scale(110%);
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.textponsition {
+    font-size: 35px;
+    margin: 2% 5%;
+
+}
+
+.Loction_box {
+    height: 2rem;
+    width: 15rem;
+
+    margin-left: 20px;
+    display: flex;
+    /* border: red 1px solid; */
+
+}
+
+.pin_icon {
+    font-size: 25px;
+    font-weight: 700;
+    color: red;
+    margin-right: 0.5rem;
+
+}
+
+.iconStar {
+    height: 2rem;
+    width: 15rem;
+    margin: 1% 5%;
+    /* border: red 1px solid; */
+
+}
+
+.star_detilse {
+    margin: 4px;
+    font-size: 1.4rem;
+    color: #FFD600;
+}
+
+.detils_place {
+    height: 5rem;
+    width: 80%;
+    margin-left: 5%;
+    margin-right: auto;
+}
+
+
+.btn_Hard {
+    height: 30px;
+    width: 6rem;
+    letter-spacing: 1.5px;
+    font-size: 1rem;
+    font-weight: 900;
+
+    color: #D9781F;
+    border: 2px #D9781F solid;
+    border-radius: 17px;
+    margin-left: 5%;
+    margin-top: 5%;
+    background-color: white;
+
+}
+
+.btn_Easy {
+    height: 30px;
+    width: 6rem;
+    letter-spacing: 1.5px;
+    font-size: 1rem;
+    font-weight: 900;
+
+    color: #46D68C;
+    border: 2px #46D68C solid;
+    border-radius: 17px;
+    margin-left: 5%;
+    margin-top: 5%;
+    background-color: white;
+
+}
+
+.btn_normal {
+    height: 30px;
+    width: 6rem;
+    letter-spacing: 1.5px;
+    font-size: 1rem;
+    font-weight: 900;
+
+    color: #3283FD;
+    border: 2px #3283FD solid;
+    border-radius: 17px;
+    margin-left: 5%;
+    margin-top: 5%;
+    background-color: white;
+
+}
+
+
+.content4 {
+    height: 40rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: red 1px solid;
 }
