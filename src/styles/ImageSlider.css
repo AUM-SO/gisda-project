@@ -1,0 +1,29 @@
+.slider {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.Previous, .Next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px 15px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.Previous, .Next :nth-child(1) {
+  left: 0;
+}
+
+.Previous, .Next:nth-child(2) {
+  right: 0;
+}

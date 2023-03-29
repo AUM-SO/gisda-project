@@ -1,78 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+.active {
+    
+}
 
-
-.nav-active {
-    color: rgb(11, 13, 11);
-    font-weight: bold;
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 
 }
 
+a {
+    text-decoration: none;
+}
+
+li {
+    cursor: pointer;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: black;
+    list-style: none;
+}
 
 .navbar {
-    height: 6rem;
+    height: 10vh;
     width: 100%;
 
-    display: flex;
+    min-width: 2px;
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    /* justify-content: center; */
+
+    background-color: rgba(255, 255, 255, 0.29);
 }
 
-
-.stylenav {
-
+.brand {
     height: 3rem;
-    width: 5rem;
-    margin: 2rem 2vw;
-    text-decoration: none;
-    color:#000000;
-    display: flex;
+    width: 200px;
+    margin-left: 10vh;
+
+    display: inline-flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-}
-.stylenav:hover {
-    
-    text-decoration: underline;
-    transition: 0.3s;
-    
+
+
 }
 
-.btnnav_group {
-    margin-left: 30%;
+.brand h1 {
+    color: black;
+    height: auto;
+    width: auto;
+    margin: 0 1rem;
 }
 
 .logo {
-    height: 5rem;
-    width: 10vw;
+
+    font-size: 3rem;
+    color: black;
+}
+
+.container {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    
+
+}
+
+.nav-Link {
+    height: 5vh;
+    width: 30vw;
 
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 36px;
-
-
+    justify-content: start;
 }
 
-.btn-nav {
-    height: 4vh;
-    width: 6vw;
-    font-size: 16px;
-    color: #000000;
+.notshow {
+    display: none;
+}
+
+.btnHumburger {
+    display: none;
+}
+
+.manu-nav {
+    margin: 0 2vw;
+}
+
+
+
+.btnstyle {
+    height: 50px;
+    width: 130px;
     border-radius: 17px;
+    font-size: 16px;
+    margin: 0 1rem;
+    text-align: center;
+    letter-spacing: 1px;
+    color: white;
+    background-color: black;
     border: 0px;
-    margin: 0 0.5vw;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 
+    cursor: pointer;
 
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
 
+.btnstyle:hover {
+    transition: 0.6s;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 
 
-.btn-nav:hover {
-    color: rgb(255, 255, 255);
-    background-color: rgb(23, 23, 23);
-    transition: 0.3s;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+.mobile-menu {
+    margin-left: 0;
+    display: none;
+
+}
+
+@media screen and (max-width: 1200px) {
+
+    .notshow {
+        display: block;
+    }
+
+    .btn_notshow {
+        display: none;
+    }
+
+    .container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        display: inline-flex;
+        z-index: 1;
+
+
+    }
+
+    .btnHumburger {
+        height: 50px;
+        width: 50px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        border-radius: 10px;
+        position: absolute;
+        top: 2vh;
+        right: 10%;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    }
+
+    .manu-nav {
+        padding: 10px;
+
+    }
+
+    .nav-Link {
+        height: 100vh;
+        width: 100%;
+        min-width: 250px;
+        backdrop-filter: blur(17px);
+        background-color: rgba(120, 120, 120, 0.08);
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+        margin: 0px;
+        border-radius: 0 0 0 17px;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-Link::after {
+        display: block;
+
+    }
+
+    .moblie-manu {
+        top: 0rem;
+        position: fixed;
+        display: flex;
+        max-height: 53rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .close-manu {
+        display: none;
+    }
+
+}
+
+
+@media screen and (max-width: 375px) {
+
+    .navbar {
+        min-width: 120px;
+    }
+    .brand h1 {
+        font-size: 1rem;
+    }
 }

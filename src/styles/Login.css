@@ -1,13 +1,14 @@
-/* Sign up Page */
+/* Login Page */
 
-  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 body {
-    background-color: rgb(255, 255, 255);
+
     font-family: 'Poppins', sans-serif;
 }
 
-.backgroud {
+
+.backgroud-login-page {
     /* Login Page */
     position: none;
     margin-top: 5vh;
@@ -16,89 +17,87 @@ body {
 
     width: 60vw;
     height: 80vh;
-    background: #F5F5F5;
-    border-radius: 17px;
+
+    border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
     overflow: hidden;
 
 }
 
-.img-signup {
+.img-login {
     height: 80vh;
     width: 50%;
-
+    overflow: hidden;
 }
 
 .pic_form_Login {
     height: 80vh;
     width: 100%;
-    background-image: url(/public/picture/image1.jpg);
-    
+    display: flex;
 }
 
-.input-group {
-    /* border: rgb(29, 211, 75) 1px solid; */
-    /* display: flex;
+.pic_sigup {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.input-group-login {
+    max-height: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: center; */
-
-    margin-left: 16%;
-    margin-right: auto;
+    flex-direction: column;
 
 }
 
-.form-signup {
+.form-login {
     height: 80vh;
     width: 50%;
 
 }
 
 .text-group {
-    height: 10vh;
-    width: 20vw;
-    margin-left: 16%;
-    margin-top: 5rem;
-    /* border: rgb(228, 55, 12) 1px solid; */
+    max-height: 10vh;
+    max-width: 20vw;
+    margin-top: 20%;
+    margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.form-signup h1 {
+.text-group p {
+    font-size: 0.8vw;
+}
+
+.form-login h1 {
     font-size: 2rem;
     font-weight: 700;
 }
 
-.form-signup p {
-    height: 2vh;
-    width: 20vw;
-
-
-}
-
-.input {
-    box-sizing: border-box;
+.input-login {
 
     /* Auto layout */
-    height: 2.5rem;
+    height: 3rem;
     width: 20vw;
-
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-
+    align-items: center;
     padding: 1vh 1vh;
-    margin-top: 3vh;
     margin-bottom: 2vh;
-    gap: 8px;
-
-    background-color: #F5F5F5;
+    font-size: 16px;
+    background-color: #ffffff;
     border-top: none;
     border-left: none;
     border-right: none;
     border-bottom: 1px solid #E0E0E0;
-    
+
 
 }
 
@@ -120,47 +119,184 @@ body {
 }
 
 /* hover btn  */
-.btn_signup:hover {
-    color: #F5F5F5;
-    background-color: rgb(0, 0, 0);
-
+.btn_login:hover {
+    border: 1px solid #060606;
+    transition: 0.3s ease-in;
+    color: #000000;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    background-color: rgba(255, 255, 255, 0.936);
 }
 
+/* btn_login */
 
-
-
-/* btn_signup */
-
-.btn_signup {
+.btn_login {
     height: 2.5rem;
     width: 20vw;
-
+    margin: 0.5rem 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* border: 1px solid #060606; */
+    letter-spacing: 1.5px;
     border-radius: 10px;
 
-    /* font-family: 'Space Grotesk'; */
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
+    color: white;
     line-height: 20px;
+    background: black;
 }
 
+.btn_signup_LoginPages {
+    height: 2.5rem;
+    width: 20vw;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #060606;
+    border-radius: 10px;
+    letter-spacing: 1.5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    line-height: 20px;
+    background: rgb(0, 0, 0);
+}
 
-.link_signup {
+/* style btn signup in Login Page */
+.btn_signup_LoginPages:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    transition: 0.3s;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.link_Signup {
     height: 2.5rem;
     width: 30vw;
-
     display: flex;
     align-items: center;
     justify-content: center;
-    /* border: #060606 1px solid; */
+    position: absolute;
+    bottom: 10%;
 }
 
-.link_signup p {
+.link_Signup p {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 2vh;
+    width: 100%;
+    font-size: 0.8vw;
+}
+
+.link_Signup a {
+    color: black;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1440px) {
+    .backgroud-login-page {}
+}
+
+@media screen and (max-width: 1200px) {
+
+    .img-login {
+        display: none;
+    }
+
+    .form-login {
+        height: 100%;
+        width: 57%;
+    }
+
+    .text-group {
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    .form-login h1 {
+        font-size: 3rem;
+    }
+
+    .text-group p {
+        font-size: 1.5vw;
+    }
+
+    .input-group-login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 30%;
+        width: 100%;
+
+    }
+
+    .input-login {
+        height: 3rem;
+        width: 35vw;
+    }
+
+    .btn_login, .btn_signup_LoginPages {
+        width: 35vw;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    .backgroud-login-page {
+        text-align: center;
+        width: inherit;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+    .link_Signup {
+        width: 65vw;
+    }
+
+    .form-login {
+        height: 100%;
+        width: 100%;
+        /* text-align: center; */
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        flex-direction: column;
+    }
+
+}
+
+
+@media screen and (max-width: 425px) {
+    .input-login {
+        height: 3rem;
+        width: 70%;
+    }
+
+    .btn_login, .btn_signup_LoginPages {
+        width: 70%;
+    }
+    
+}
+
+
+
+@media screen and (max-width: 375px) {
+    .link_Signup {
+        width: 100%;
+    }
+
+    .backgroud-login-page {
+        min-width: 320px;
+    }
+
+
+
+
 }

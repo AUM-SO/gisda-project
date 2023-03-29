@@ -1,80 +1,95 @@
-import { Col, Row } from "react-grid-system";
-import { BrowserRouter } from "react-router-dom";
-import "../styles/footer.css";
+import React from 'react'
 
-import { CiFacebook } from "react-icons/ci";
-import { AiOutlineTwitter } from "react-icons/ai";
-import { FaInstagram } from "react-icons/fa";
-import { Divider } from "antd";
+import '../styles/footerstyle.css'
+import { Link } from 'react-router-dom'
+import { BsFacebook } from "react-icons/bs"
+
+/* import Page for footer manu */
+import Home from "../pages/Home"
+import Trekking from "../pages/Trekking"
+import Blog from "../components/Blog"
+import About from "../pages/Abouts"
+import Login from "../components/Login"
+import Signup from "../components/Signup"
+
 const Footer = () => {
   return (
     <>
-      <BrowserRouter>
-        <div className="Rowgrid"></div>
-        <Row>
-          <Col span={8}>
-            <div className="f2">
-              <h2>Trekking</h2>
-              <p>
-                Our vision is to provide convenience and help increase your
-                sales business.
-              </p>
-              <div className="Facebook">
-                <CiFacebook />
-              </div>
+      {/* <div className="container_footer"> */}
 
-              <div className="Twitter">
-                <AiOutlineTwitter />
+      {/*  <div className="textbox_footer">
+          <Link to='/' className='boxbox' ><FaMountain className='Logo_footer' />&nbsp;&nbsp;<h1 className='h1_footer'>Trekking</h1></Link>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, deleniti.</p>
+          <p></p>
+        </div>
+        <div className="menulist">
+          <div className="manu_footer">
+            <Link to='/'>Home</Link>
+            <Link to='/Trekking'>Trekking</Link>
+            <Link to='/Blog'>Blog</Link>
+            <Link to='/About'>About</Link>
+          </div>
+          <div className="contactBox">
+
+          </div>
+
+
+        </div> */}
+
+      <footer class="footer">
+        <div className="logo_footer">
+          <Link to='/'>Trekking</Link>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero.</p>
+        </div>
+        <div class="container-footer">
+          <div class="row">
+            <div class="footer-col">
+              <h4>Pages</h4>
+              <ul>
+                <li><Link to='/'>Home</Link ></li>
+                <li><Link to='/Trekking'>Trekking</Link ></li>
+                <li><Link to='/Blog'>Blog</Link ></li>
+                <li><Link to='/About'>About</Link ></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>service</h4>
+              <ul>
+                <li><Link to=''>Trekking</Link ></li>
+                <li><Link to=''>Map GIS</Link ></li>
+                <li><Link to=''>Mountain</Link ></li>
+                <li><Link to=''>Parking Area</Link ></li>
+                <li><Link to=''>Hotel</Link ></li>
+              </ul>
+            </div>
+            {/* <div class="footer-col">
+                <h4>online shop</h4>
+                <ul>
+                  <li><Link to=''>watch</Link ></li>
+                  <li><Link to=''>bag</Link ></li>
+                  <li><Link to=''>shoes</Link ></li>
+                  <li><Link to=''>dress</Link ></li>
+                </ul>
+              </div> */}
+            <div class="footer-col">
+              <h4>follow us</h4>
+              <div class="social-links">
+                <Link to='https://www.facebook.com/gistda' target='_blank'><BsFacebook class='iconLinkFooter'/></Link >
+                <Link to=''><BsFacebook class='iconLinkFooter' target='_blank'/></Link >
+                <Link to=''><BsFacebook class='iconLinkFooter' target='_blank'/></Link >
+                
+                
               </div>
-              <div className="Instagram">
-                <FaInstagram />
-              </div>
             </div>
-          </Col>
-          <Col span={8} offset={8}>
-            <Row>
-              <Col span={8}>
-                <h2>About</h2>
-                <p href="#">How it works</p>
-                <p href="#">Featured</p>
-                <p href="#">Partnership</p>
-                <p href="#">Bussiness Relation</p>
-              </Col>
-              <Col span={8}>
-                <h2>Community</h2>
-                <p href="#">Events</p>
-                <p href="#">Blog</p>
-                <p href="#">Podcast</p>
-                <p href="#">Invite a friend</p>
-              </Col>
-              <Col span={8}>
-                <h2>Socials</h2>
-                <p href="#">Discord</p>
-                <p href="#">Instagram</p>
-                <p href="#">Twitter</p>
-                <p href="#">Facebook</p>
-              </Col>
-            </Row>
-          </Col>
-        </Row>
-        <Divider variant="middle" />
-        <Row>
-          <Col span={8}>
-            <div className="t3">
-              <p>&copy; 2022 Auto Fast. All rights reserved</p>
-            </div>
-          </Col>
-          <Col span={8} offset={8}>
-            <div className="t1">
-              <p>Privacy & Policy</p>
-            </div>
-            <div className="t2">
-              <p>Terms & Condition</p>
-            </div>
-          </Col>
-        </Row>
-      </BrowserRouter>
+          </div>
+        </div>
+      </footer>
+
+      {/* </div> */}
     </>
-  );
-};
-export default Footer;
+
+
+  )
+}
+
+export default Footer

@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
 h1, .textbox h2,
 h3 {
     font-family: 'Poppins', sans-serif;
+
+}
+
+button {
+    cursor: pointer;
 }
 
 .poniter {
@@ -9,124 +16,121 @@ h3 {
 
 p {
     font-family: 'Poppins', sans-serif;
+
 }
 
 * {
-    box-sizing: 0;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+
+
 }
 
+
+
 .header {
-    background-image: url("/public//img/5ec2884b2e35c375b7b912a2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    
-    height: 60em;
-    /* border: solid; */
+    background-color: #33333331;
+    height: 100%;
+    width: auto;
+    z-index: 1;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+}
+
+.imghaeder {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
 }
 
 .header h1 {
-    height: 45%;
-    width: 100%;
 
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: end;
-
     color: white;
     font-size: 12rem;
     font-weight: bold;
+
 }
 
-.header h3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 5%;
-    margin-right: 5%;
-    font-weight: lighter;
-
+.header p {
+    height: auto;
+    width: 50%;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-align: center;
     color: white;
-    /* border: solid; */
-
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.header .ph {
-    height: 12vh;
+.container_header {
+    height: 100vh;
     width: auto;
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-
-    margin-left: 10%;
-    margin-right: 10%;
+    flex-direction: column;
 
 }
 
 .content1 {
     height: 20rem;
-    width: 80%;
-   
-    margin-left: 10%;
-    margin-bottom: 5%;
-
+    width: 100%;
     display: inline-flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
+    /* border: 1px solid red; */
+
 }
 
 
+
 .rowheader {
-    height: 15vh;
-    width: 20vw;
-    margin-top: 10vh;
-    margin-left: 5%;
+    height: 11vh;
+    width: 30rem;
+    margin-left: 16%;
 }
 
 
 
 
 .btn_titlse {
-    height: 10vh;
+    height: auto;
     width: auto;
-    margin-top: 3rem;
+    margin-top: 3vh;
     text-align: center;
 }
 
 
 .bt1 {
-
-    height: 4vh;
-    width: 120px;
-    margin-bottom: 12%;
-    border: 2px solid #FFFFFF;
+    height: 5vh;
+    min-width: 150px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 30px;
 }
 
 .bt2 {
-    
     height: 2rem;
     width: 6rem;
-    margin-right: 5%;
-
+    margin-right: 16%;
 }
 
 
 .bt2 button {
-    height: 3vh;
+    height: 30px;
     width: 90px;
-
-    
     border: 1px solid #FDFDFD;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 20px;
     background-color: white;
     letter-spacing: 1px;
-
+    cursor: pointer;
 }
 
 .bt2 button:hover {
@@ -139,30 +143,35 @@ p {
 
 /*APIRAK DAV*/
 
+.Loction_box {
+    height: 2rem;
+    width: 100%;
+    display: flex;
+    font-size: 16px;
+}
+
+
 .content2 {
-    height: 50rem;
+    height: 60vh;
     width: 100%;
     display: flex;
     justify-content: center;
-
-    
-
+    align-items: center;
+    /* background-color: rgba(133, 133, 133, 0.179); */
 }
 
 .cardDetlis {
-    height: 65vh;
-    width: 27rem;
-    margin: 2rem 2.5rem;
+    /* height: 35rem;
+    width: 22rem; */
 
-
+    max-height: 35rem;
+    max-width: 22rem;
+    margin: 0 1rem;
     background-color: white;
-    border-radius: 20px;
-
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
     overflow: hidden;
     display: inline-block;
-   
-
-
 }
 
 
@@ -181,42 +190,18 @@ p {
 
 }
 
-.sizeimg {
-    height: 20rem;
+.imgincard {
+    height: 45%;
     width: 100%;
-}
-
-.card {
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-}
-
-.imgincard1 {
-    background-image: url(/public/img/mountaincard.jpg);
-    background-repeat: no-repeat;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
 
+    overflow: hidden;
+    background-color: #81808060;
 }
 
-.imgincard2 {
-    background-image: url(/public/img/85964ae7-3361-431a-a029-486f6216699e.jpg);
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-}
-
-.imgincard3 {
-    background-image: url(/public/img/mountaincard2.png);
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-
+.imgcard {
+    height: 100%;
+    width: 100%;
 }
 
 .zoom {
@@ -232,17 +217,12 @@ p {
 
 .textponsition {
     font-size: 35px;
-    margin: 2% 5%;
+
 
 }
 
-.Loction_box {
-    height: 2rem;
-    width: 15rem;
-
-    margin-left: 20px;
-    display: flex;
-    
+.container_text {
+    padding: 5%;
 
 }
 
@@ -256,8 +236,10 @@ p {
 
 .iconStar {
     height: 2rem;
-    width: 15rem;
-    margin: 1% 5%;
+    width: auto;
+    margin-left: 0;
+    margin-top: 3rem;
+
     /* border: red 1px solid; */
 
 }
@@ -269,10 +251,15 @@ p {
 }
 
 .detils_place {
-    height: 5rem;
+    height: 5vh;
     width: 80%;
-    margin-left: 5%;
+    /* margin-left: 5%;
     margin-right: auto;
+ */
+}
+
+.p-card {
+    font-size: 18px;
 }
 
 
@@ -281,12 +268,12 @@ p {
     width: 6rem;
     letter-spacing: 1.5px;
     font-size: 1rem;
-    font-weight: 900;
+    font-weight: 600;
 
     color: #D9781F;
     border: 2px #D9781F solid;
     border-radius: 17px;
-    margin-left: 5%;
+    /* margin-left: 4%; */
     margin-top: 5%;
     background-color: white;
 
@@ -297,12 +284,12 @@ p {
     width: 6rem;
     letter-spacing: 1.5px;
     font-size: 1rem;
-    font-weight: 900;
+    font-weight: 600;
 
     color: #46D68C;
     border: 2px #46D68C solid;
     border-radius: 17px;
-    margin-left: 5%;
+
     margin-top: 5%;
     background-color: white;
 
@@ -313,12 +300,11 @@ p {
     width: 6rem;
     letter-spacing: 1.5px;
     font-size: 1rem;
-    font-weight: 900;
+    font-weight: 600;
 
     color: #3283FD;
     border: 2px #3283FD solid;
     border-radius: 17px;
-    margin-left: 5%;
     margin-top: 5%;
     background-color: white;
 
@@ -328,10 +314,8 @@ p {
 .textbox {
     height: 20rem;
     width: 30%;
-
-
-    margin-top: 2%;
-    margin-left: 17%;
+    /* margin-top: 2%; */
+    margin-left: 15%;
 
 }
 
@@ -340,9 +324,10 @@ p {
 }
 
 .btn_moredetiles {
-    height: 4vh;
-    width: 120px;
-
+    min-height: 5vh;
+    min-width: 150px;
+    color: white;
+    background-color: rgb(0, 0, 0);
     font-weight: 400;
     letter-spacing: 1px;
     margin: 2rem 0;
@@ -355,6 +340,7 @@ p {
     color: #ffffff;
     background-color: rgb(23, 23, 23);
     transition: 0.4s;
+
     border: none;
     box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
 }
@@ -392,7 +378,7 @@ p {
 
 .icon {
     color: #46D68C;
-    font-size: 3rem;
+    font-size: 5vh;
 }
 
 .font_icon {
@@ -408,21 +394,21 @@ p {
 
 
 .content4 {
-    height: 60rem;
+    height: 30rem;
     width: 100%;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-
+    margin-top: 6%;
+    margin-bottom: 16%;
 }
 
 .vdo_con4 {
-    height: 30rem;
-    width: 70%;
+    height: 100%;
+    width: 50%;
     overflow: hidden;
-    border-radius: 14px;
-    margin-left: 17%;
-
+    border-radius: 10px;
+    margin-left: 14%;
 }
 
 .textcon4 {
@@ -432,13 +418,18 @@ p {
     margin-right: 5%;
 }
 
+.textcon4 p {
+    width: 80%;
+
+}
+
 .group_Link {
     height: 5rem;
     width: 16rem;
     display: inline-flex;
     align-items: center;
 
-   
+
 }
 
 
@@ -473,38 +464,30 @@ p {
 
 
 
-.footer {
-    margin-top: 10rem;
-    height: 25rem;
-    width: 100%;
-    padding-bottom: 2rem;
-    background-color: #F1F1F1;
-   
-    display: inline-flex;
 
-}
 
 .leftMenu {
     height: 15rem;
     width: 20%;
     margin: 4% 5%;
-    
+
 }
 
-.About_list, .Socials_list , .Community_list{
+.About_list, .Socials_list, .Community_list {
     height: 20rem;
     width: 10rem;
     display: flex;
     flex-direction: column;
     margin-top: 4%;
     margin-left: 5%;
-    
+
 }
 
 .About_list {
     margin-left: 30%;
 }
-.About_list h2 , .Community_list h2 , .Socials_list h2 {
+
+.About_list h2, .Community_list h2, .Socials_list h2 {
     margin-bottom: 1rem;
 }
 
@@ -515,29 +498,642 @@ p {
     font-size: 1rem;
 }
 
+@media screen and (max-width: 1700px) {
+    .box {
+        height: 35rem;
+        width: 80%;
+    }
+}
 
-@media screen and (max-width: 1500px) {
-    .header h1{
-        font-size: 6rem;
-        
+@media screen and (max-width: 1536px) {
+
+    .header h1 {
+        font-size: 8rem;
     }
 
-    .ph {
+    .content1 {
+
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+
+
+
+
+    .btn_moredetiles {
+        height: 5vh;
+        min-width: 150px;
+    }
+
+    .btn_normal, .btn_Easy, .btn_Hard {
         font-size: 14px;
+        font-weight: 600;
     }
 
-    
- }
+    .btn-nav {
+        height: 5vh;
+        font-weight: 500;
+    }
 
-@media screen and (max-width: 686px) {
-    .header h1{
-        font-size: 3rem;
+    .rowheader, .bt2 {
+        margin: 10px;
+    }
+
+}
+
+@media screen and (max-width: 1366px) {
+
+
+    .imgincard {
+        height: 45%;
         width: 100%;
     }
 
+    .imgcard {
+        height: 100%;
+        width: 100%;
+    }
+
+    .header h1 {
+        font-size: 6rem;
+    }
+
     .ph {
         font-size: 14px;
     }
 
+    .textponsition {
+        font-size: 24px;
+    }
+
+    /* .Loction_box {
+        margin-left: 4%;
+    } */
+
+    .p_card {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 1440px) {
+
+    .rowheader h1 {
+        width: auto;
+    }
+
+    .box {
+        margin-top: auto;
+        margin-bottom: auto;
+        text-align: center;
+        width: 100%;
+    }
+
+    .Socials_list {
+        margin-right: 2rem;
+    }
+
+    .About_list {
+        margin-left: 29%;
+    }
+
+
+
+
+}
+
+@media screen and (max-width: 1200px) {
+    .iconbtn {
+        margin: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .btn_titlse {
+        height: auto;
+        width: auto;
+    }
+
+    .content3 {
+        display: flex;
+        flex-flow: column;
+        margin: 5rem 0;
+    }
+
+    .textbox {
+        height: 20rem;
+        width: 62%;
+        /* margin-top: 2%; */
+        margin-left: 0%;
+        text-align: center;
+    }
+
+    .container_icon {
+        margin: 4%;
+    }
+
+
+    .content4 {
+        height: 40rem;
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .textcon4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .textcon4 p {
+        width: 70%;
+    }
+
+    .vdo_con4 {
+        margin: 0;
+        margin-top: 2vh;
+
+        min-width: 50%;
+        width: 80%;
+    }
+}
+
+/* ------------------Tablet Screen ------------------ */
+
+
+@media screen and (max-width: 810px) {
+
+    .header h1 {
+        font-size: 12vw;
+    }
+
+    .rowheader {
+        height: auto;
+        width: auto;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .content1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .content1 p, .bt2 {
+        margin: 0;
+        /* display: none; */
+    }
+
+    .textbox_comtent1 {
+        text-align: center;
+    }
+
+    .texttitle {
+        font-size: 30px;
+    }
+
+    .Loction_box {
+        display: flex;
+        align-items: center;
+
+    }
+
+    .Loction_box p, .pin_icon {
+        font-size: 15px;
+    }
+
+    .content2 {
+        height: 50vh;
+        width: 100%;
+        display: inline-flex;
+        /* flex-direction: column; */
+    }
+
+    .p_card {
+        font-size: 12px;
+    }
+
+    .content3 {
+        height: 50rem;
+        width: 100%;
+    }
+
+    .container_icon {
+        height: 46rem;
+        width: 100%;
+    }
+
+    .content4 {
+        height: 50rem;
+        width: 100%;
+
+
+    }
+
+    .box {
+        height: 35rem;
+        width: 100%;
+    }
+
+    .textbox {
+        height: 30rem;
+        width: 80%;
+    }
+
+
+
+    .btn_normal, .btn_Easy, .btn_Hard {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .detils_place {
+        font-size: 10px;
+    }
+
+    .sizeimg {
+        height: 15rem;
+        width: 100%;
+    }
+
+    .About_list {
+        margin-left: 20%;
+    }
+
+    .nav-elements {
+        display: none;
+    }
+
+    .textcon4 {
+        height: 26rem;
+    }
+
+    .textcon4 p {
+        width: 90%;
+
+    }
+
+    /* .vdo_con4 {
+        margin-left: 10%;
+    } */
+
     
- }
+}
+
+@media screen and (max-width: 768px) {
+
+
+    .header p {
+        width: 80%;
+    }
+
+    .content2 {
+        height: 105rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+
+    .card_backgroud {
+        margin: 1rem 0;
+
+    }
+
+    .btn_titlse {
+        margin: 2%;
+    }
+
+    /* .container_icon {
+        height: 46rem;
+        width: 100%;
+    } */
+
+}
+
+/* ----------- Mobile Screen ------------ */
+
+@media screen and (max-width: 425px) {
+
+    .brand {
+        margin-left: 3vh;
+    }
+
+    .container {
+        height: 7vh;
+    }
+
+    .nav-elements {
+        display: none;
+        position: none;
+    }
+
+    .header h1 {
+        height: 10vh;
+        font-size: 3rem;
+    }
+
+    .content1 p {
+        font-size: 14px;
+    }
+
+    .header p {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    .btn_titlse {
+        margin-top: 5vh;
+        height: 5vh;
+        width: 120px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .content1 p {
+        width: 80vw;
+
+    }
+
+    .card_backgroud {
+        height: 50vh;
+        width: auto;
+
+    }
+
+    .cardDetlis {
+        margin-top: 2rem;
+        height: 100%;
+        width: 100%;
+    }
+
+    .iconStar {
+        margin-top: 10%;
+    }
+
+    .btn_normal, .btn_Easy, .btn_Hard {
+        font-size: 14px;
+        font-weight: 600;
+        margin-top: 5px;
+    }
+
+    .sizeimg {
+        height: 16rem;
+        width: 100%;
+    }
+
+    .detils_place {
+        height: 5vh;
+        width: 100%;
+    }
+
+
+    .textbox {
+        height: 36vh;
+        width: 80%;
+        margin-bottom: 10%; 
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .btn_moredetiles {
+        height: 5vh;
+        width: 150px;
+    }
+
+    .iconStar {
+        margin-top: 3%;
+    }
+
+    .iconbtn {
+        height: 8.5rem;
+        width: 9rem;
+        margin: 2vw;
+    }
+
+    .icon {
+        color: #46D68C;
+        font-size: 4vh;
+    }
+
+    .container_icon {
+        height: 30rem;
+        width: 100%;
+    }
+
+    .box {
+        margin-top: 15%;
+        height: 100%;
+        width: 100%;
+    }
+
+    .content4 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+        height: 70rem;
+        width: 100%;
+
+    }
+
+    .textcon4 {
+        height: 27rem;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2rem;
+        margin-top: 40%;
+        text-align: center;
+
+    }
+
+    .vdo_con4 {
+        margin: 20%;
+    }
+
+
+    
+
+    .About_list, .Socials_list, .Community_list {
+        display: none;
+    }
+
+    .leftMenu h1 {
+        font-size: 1rem;
+    }
+
+    .leftMenu p {
+        font-size: 12px;
+    }
+
+    .group_Link {
+        height: 4rem;
+        border: red 1px solid;
+        margin-top: 10px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 375px) {
+
+    .brand {
+        margin-left: 1vh;
+    }
+
+    .content2 {
+        height: 100%;
+        width: 100%;
+    }
+
+    .iconStar {
+        margin-top: 5%;
+    }
+
+    .btn_normal, .btn_Easy, .btn_Hard {
+        font-size: 12px;
+        font-weight: 600;
+        margin-top: 2%;
+    }
+
+    .card_backgroud {
+        height: 50vh;
+        width: 100%;
+        display: flex;
+    }
+
+    .header h1 {
+        height: 10vh;
+        font-size: 40px;
+    }
+
+    /* .vdo_con4{
+        margin: 2rem 0;
+    } */
+
+}
+
+@media screen and (max-width: 360px) {
+
+
+    .box {
+        width: 91%;
+    }
+
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .content1 {
+        height: 20rem;
+    }
+
+    .content2 {
+        height: 90rem;
+    }
+
+    .card_backgroud {
+        display: flex;
+    }
+
+    .textponsition {
+        font-size: 21px;
+    }
+
+    .cardDetlis {
+        margin-top: 0;
+    }
+
+    .detils_plac {
+        font-size: 12px;
+    }
+
+    .star_detilse {
+        font-size: 18px;
+    }
+
+    .btn_normal, .btn_Easy, .btn_Hard {
+
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .box {
+        margin-top: 2rem;
+        width: 100%;
+    }
+
+
+
+    .btn_moredetiles {
+        height: 6vh;
+    }
+
+    .content4 {
+        margin-top: 11rem;
+
+    }
+
+    .container_icon {
+        margin: 8% 5%;
+    }
+
+    .pin_icon {
+        font-size: 20px;
+    }
+
+
+}
+
+@media screen and (max-width: 320px) {
+
+    .header h1 {
+        font-size: 35px;
+    }
+
+    .rowheader h1 {
+        width: auto;
+        height: 3rem;
+    }
+
+    .content1 p {
+        width: 99%;
+    }
+
+    .card_backgroud {
+        height: 50vh;
+        width: 100%;
+    }
+    .textcon4 h1 {
+        font-size: 30px;
+        margin-bottom: 10%;
+    }
+    .iconbtn {
+        height: 8rem;
+        width: 8rem;
+        margin: 2vw;
+    }
+
+    .vdo_con4 {
+        margin-top: 40%;
+    }
+
+}

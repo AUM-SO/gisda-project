@@ -1,48 +1,73 @@
-import React from 'react'
-
-import { BrowserRouter, NavLink, Routes, Route, Link } from 'react-router-dom';
+import React, { Component } from 'react'
 import '../styles/Navbar.css'
-
-// pages
-import Home from '../pages/Home'
-import Trekking from '../pages/Trekking'
-import Contact from '../pages/Contact'
-import Abouts from '../pages/Abouts'
-import Login from '../components/Login'
-import Signup from '../components/Signup'
+import { BrowserRouter, Router, Route, Link, Routes, NavLink } from 'react-router-dom';
 
 
-function Navber() {
-    /* let activeClassName = "nav-active" */
+import Home from "../pages/Home"
+import Trekking from "../pages/Trekking"
+import Blog from "../components/Blog"
+import About from "../pages/Abouts"
+import Login from "../components/Login"
+import Signup from "../components/Signup"
+
+/* import Icon react */
+import { FaMountain } from "react-icons/fa"
+import { GiHamburgerMenu } from "react-icons/gi"
+
+import useState from 'react-hook-use-state';
+
+
+
+
+  function btnHumburger() {
+    let burgerbtn = document.getElementById('btnHumburger').value = 1
+    let navLink = document.getElementById('nav-Link')
+    console.log(burgerbtn)
+
+    burgerbtn.addEventListener('click', () => {
+        navLink.classList.toggle('moblie-manu')
+    })
+} 
+
+function navbar() {
+
     return (
         <BrowserRouter>
-            <header>
-
-                <nav className='navbar'>
-                    <h1 className='logo'>Trekking</h1>
-                    <NavLink to="/" className="stylenav" >Home</NavLink>
-                    <NavLink to="/Trekking" className="stylenav" /* className={({ isActive }) => isActive ? activeClassName : undefined} */>Trekking</NavLink>
-                    <NavLink to="/Contact" className="stylenav" /* className={({ isActive }) => isActive ? activeClassName : undefined} */>Contact</NavLink>
-                    <NavLink to="/Abouts"  className="stylenav" >Abouts</NavLink>
-                    <div className="btnnav_group">
-                        <Link to="/Login"><button className='btn-nav btn1'>Login</button></Link>
-                        <Link to="/Signup"><button className='btn-nav btn2'>Sign up</button></Link>
+            <div className="navbar">
+                <div className="brand">
+                    <Link to='/'><FaMountain className='logo' /></Link>
+                    <Link to='/'><h1>Trekking</h1></Link>
+                </div>
+                <div className="container">
+                    <ul className="nav-Link  " id='nav-Link'>
+                        <NavLink to='/' className='manu-nav'><li>Home</li></NavLink>
+                        <NavLink to='/Trekking' className='manu-nav'><li >Trekking</li></NavLink>
+                        <NavLink to='/Blog' className='manu-nav'><li>Blog</li></NavLink>
+                        <NavLink to='/About' className='manu-nav'><li>About</li></NavLink>
+                        <NavLink to='/Login' className='manu-nav notshow '><li>Login</li></NavLink>
+                        <NavLink to='/Signup' className='manu-nav notshow '><li>Signup</li></NavLink>
+                    </ul>
+                    <div className="btn_gourp">
+                        <Link to='/Login'><button className="btnstyle btn_notshow">Login</button></Link>
+                        <Link to='/Signup'><button className="btnstyle btn_notshow">Signup</button></Link>
                     </div>
-
-
-                </nav>
-            </header>
+                    <button className='btnHumburger' id='btnHumburger' onClick={btnHumburger}><GiHamburgerMenu /></button>
+                </div>
+            </div>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/Trekking" element={<Trekking />} />
-                <Route path="/Contact" element={<Contact />} />
-                <Route path="/Abouts" element={<Abouts />} />
+                <Route path="/Blog" element={<Blog />} />
+                <Route path="/About" element={<About />} />
                 <Route path="/Login" element={<Login />} />
                 <Route path="/Signup" element={<Signup />} />
             </Routes>
         </BrowserRouter>
-        
+
     )
 }
 
-export default Navber
+
+
+
+export default navbar
