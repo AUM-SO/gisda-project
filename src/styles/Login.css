@@ -198,7 +198,9 @@ body {
 }
 
 @media screen and (max-width: 1440px) {
-    .backgroud-login-page {}
+    .backgroud-login-page {
+        
+    }
 }
 
 @media screen and (max-width: 1200px) {

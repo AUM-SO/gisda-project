@@ -1,0 +1,32 @@
+.dropdown-filter {
+    display: inline-block;
+    margin: 10px;
+}
+
+select {
+    padding: 2%;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+select:hover {
+    border-color: #888;
+}
+
+select:focus {
+    outline: none;
+    border-color: #5b9dd9;
+    box-shadow: 0 0 5px #5b9dd9;
+}
+
+.dropdown-filterselect    {
+    opacity: 1;
+    transform: none;
+    transition: opacity 280ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 186ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    top: 131px;
+    left: 1559px;
+    transform-origin: 79.5px  0px;
+}

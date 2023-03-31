@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable react/jsx-pascal-case */
+import React, { useEffect, useState } from "react";
 import {
   FaStar, FaHiking, FaGasPump,
   FaParking, FaFacebook, FaTiktok
@@ -8,16 +9,42 @@ import { FiMapPin, FiMap } from "react-icons/fi";
 import { BiHotel } from "react-icons/bi";
 import { GiMountaintop } from "react-icons/gi";
 import { GrInstagram } from "react-icons/gr";
+
+
 import "../styles/Home.css";
 import Footer_com from '../components/Footer'
 import { Link } from 'react-router-dom';
 
 /* import components  */
-/* import ImageSlider from '../components/img_sideshow'; */
+import ScrollToTopButton from '../components/ScrollToTopButton';
+
+/* import ripples */
+import Ripples from 'react-ripples'
+
+/* Function ScrollToTopButton */
+
 
 
 
 const Home = () => {
+  
+  /* const [cards, setCards] = useState([]);
+
+  const fetchCardsData = () => {
+    fetch("http://localhost:3000/api/posts")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setCards(data.results);
+        // console.log(data)
+        // console.log(cards.results.description)
+      });
+  };
+
+  useEffect(() => {
+    fetchCardsData();
+  }, []); */
 
   return (
     <>
@@ -26,12 +53,15 @@ const Home = () => {
         <div className="container_header">
           <h1>Trekking in EEC</h1>
           <p >
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem est sit illo! Repudiandae, libero quidem. Omnis laborum quod, tenetur rerum, harum nisi dolor deserunt perferendis quaerat nostrum quia, aspernatur odit!
-
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Voluptatem est sit illo! Repudiandae, libero quidem. Omnis laborum quod, tenetur rerum,
+            harum nisi dolor deserunt perferendis quaerat nostrum quia, aspernatur odit!
           </p>
 
           <div className="btn_titlse">
-            <button className="bt1 zoom">details more</button>
+            <Ripples>
+              <button className="bt1 btn-primary">details more</button>
+            </Ripples>
           </div>
         </div>
 
@@ -128,6 +158,65 @@ const Home = () => {
         </div>
       </div>
 
+    {/* version fetch data from data base */}
+    {/* <div className="content2">
+        <>
+          {cards.length > 0 && (
+            <>
+              {cards.map((cards) => (
+                <>
+                  <div className="card_backgroud">
+                    <div className="cardDetlis zoom poniter">
+                      <div className="imgincard ">
+                        <img
+                          key={cards.id}
+                          src={cards.cover_image}
+                          alt=""
+                          className="imgcard"
+                        />
+                      </div>
+                      <div className="container_text">
+                        <h3 className="texttitle textponsition" key={cards.id}>
+                          {cards.title}
+                        </h3>
+                        <div className="Loction_box ">
+                          <i>
+                            <FiMapPin className="pin_icon" />
+                          </i>
+                          <a key={cards.id} href={cards.content}>
+                            {cards.title}
+                          </a>
+                        </div>
+                        <div className="detils_place">
+                          <p className="p_card" key={cards.id}>
+                            {cards.description}
+                          </p>
+                        </div>
+                        <div className="iconStar">
+                          <i>
+                            <FaStar className="star_detilse" />
+                          </i>
+                          <i>
+                            <FaStar className="star_detilse" />
+                          </i>
+                          <i>
+                            <FaStar className="star_detilse" />
+                          </i>
+                          <i>
+                            <FaStar className="star_detilse" />
+                          </i>
+                        </div>
+                        <button className="btn_Easy">Easy</button>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              ))}
+            </>
+          )}
+        </>
+       
+      </div> */}
       <div className="content3">
         <div className="textbox">
           <h1>service for you</h1>
@@ -136,7 +225,7 @@ const Home = () => {
         </div>
         <div className="container_icon">
           <div className="box">
-            <button className="iconbtn poniter zoom">
+            <button className="iconbtn poniter zoom" >
               <FaHiking className="icon" />
               <h3 className="font_icon">Trakking</h3></button>
             <button className="iconbtn poniter zoom">
@@ -157,11 +246,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      {/* <div className="imgSlide">
-        <ImageSlider />
-      </div> */}
-
       <div className="content4">
         <div className="vdo_con4">
           <iframe width="100%" height="100%" src="https://www.youtube.com/embed/XALYHA2OUSE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -173,6 +257,8 @@ const Home = () => {
         </div>
       </div>
 
+
+      <ScrollToTopButton />
       <Footer_com />
     </>
   );
