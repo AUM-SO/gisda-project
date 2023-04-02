@@ -14,7 +14,6 @@ import Signup from "../components/Signup"
 import { FaMountain } from "react-icons/fa"
 import { GiHamburgerMenu } from "react-icons/gi"
 
-import useState from 'react-hook-use-state';
 
 
 
@@ -35,15 +34,15 @@ function navbar() {
         <BrowserRouter>
             <div className="navbar">
                 <div className="brand">
-                    <Link to='/'><FaMountain className='logo' /></Link>
+                    <Link to='/'><FaMountain className='logo' /></Link> 
                     <Link to='/'><h1>Trekking</h1></Link>
                 </div>
                 <div className="container">
                     <ul className="nav-Link  " id='nav-Link'>
-                        <NavLink to='/' className='manu-nav'><li>Home</li></NavLink>
-                        <NavLink to='/Trekking' className='manu-nav'><li >Trekking</li></NavLink>
-                        <NavLink to='/Blog' className='manu-nav'><li>Blog</li></NavLink>
-                        <NavLink to='/About' className='manu-nav'><li>About</li></NavLink>
+                        <NavLink to='/' className='manu-nav underline-link'><li>Home</li></NavLink>
+                        <NavLink to='/Trekking' className='manu-nav underline-link'><li >Trekking</li></NavLink>
+                        <NavLink to='/Blog' className='manu-nav underline-link'><li>Blog</li></NavLink>
+                        <NavLink to='/About' className='manu-nav underline-link'><li>About</li></NavLink>
                         <NavLink to='/Login' className='manu-nav notshow '><li>Login</li></NavLink>
                         <NavLink to='/Signup' className='manu-nav notshow '><li>Signup</li></NavLink>
                     </ul>

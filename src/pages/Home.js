@@ -1,19 +1,19 @@
 /* eslint-disable react/jsx-pascal-case */
-import React, { useEffect, useState } from "react";
+import React/* , { useEffect, useState } */ from "react";
 import {
   FaStar, FaHiking, FaGasPump,
-  FaParking, FaFacebook, FaTiktok
+  FaParking
 } from "react-icons/fa";
 
 import { FiMapPin, FiMap } from "react-icons/fi";
 import { BiHotel } from "react-icons/bi";
 import { GiMountaintop } from "react-icons/gi";
-import { GrInstagram } from "react-icons/gr";
+/* import { GrInstagram } from "react-icons/gr"; */
 
 
 import "../styles/Home.css";
 import Footer_com from '../components/Footer'
-import { Link } from 'react-router-dom';
+/* import { Link } from 'react-router-dom'; */
 
 /* import components  */
 import ScrollToTopButton from '../components/ScrollToTopButton';
@@ -59,8 +59,8 @@ const Home = () => {
           </p>
 
           <div className="btn_titlse">
-            <Ripples>
-              <button className="bt1 btn-primary">details more</button>
+            <Ripples className="zoom">
+              <button className="bt1 btn-primary ">details more</button>
             </Ripples>
           </div>
         </div>
