@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../styles/Trekking.css";
+import { Link } from 'react-router-dom'
 
 /* import react icon  */
 import { FaWalking } from "react-icons/fa";
@@ -159,12 +160,28 @@ function Trekking() {
 
             {/*  พื้นที่แสดง cards */}
             <div className="container_showitem">
+
+              <Ripples>
+                <Link to='/ShowDetails' className="Treak_card" >
+                  <div className="textitem">
+                    <h3>ชื่อสถานที่</h3>
+                    <div className="walk">
+                      <FaWalking id='walkicon' /><p>ระยะทาง 5.5 กิโลเมตร</p>
+                    </div>
+                    <div className="time">
+                      <RxClock id='Clock' /><p>เวลาเฉลี่ย 2 ชม.</p>
+                    </div>
+                  </div>
+                  <img src={require("../img/mountain8.png")} alt="" className='img_item zoom' />
+                </Link>
+              </Ripples>
+              
               <>
                 {cards.length > 0 && (
                   <>
                     {cards.map((cards) => (
                       <>
-                        <Ripples>
+                        {/* <Ripples>
                           <button className="Treak_card ">
                             <div className="textitem">
                               <h3 key={cards.id}>{cards.title}</h3>
@@ -177,13 +194,31 @@ function Trekking() {
                                 <p>เวลาเฉลี่ย 2 ชม.</p>
                               </div>
                             </div>
+
+                          </button>
+                        </Ripples> */}
+
+                        <Ripples>
+                          <Link to='/ShowDetails' className="Treak_card" >
+                            <div className="textitem">
+                              <h3 key={cards.id}>{cards.title}</h3>
+                              <div className="walk">
+                                <FaWalking id='walkicon' />
+                                <p>ระยะทาง 5.5 กิโลเมตร</p>
+                              </div>
+                              <div className="time">
+                                <RxClock id='Clock' />
+                                <p>เวลาเฉลี่ย 2 ชม.</p>
+                              </div>
+                            </div>
                             <img
                               key={cards.id}
                               src={cards.cover_image}
                               className="img_item zoom"
                             />
-                          </button>
+                          </Link>
                         </Ripples>
+
                       </>
                     ))}
                   </>

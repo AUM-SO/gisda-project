@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-.active {}
 
 * {
     margin: 0;
     border: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-
 }
 
 a {
@@ -16,9 +14,9 @@ a {
 
 li {
     cursor: pointer;
-    font-size: 20px;
+    font-size: 1.2rem;
     letter-spacing: 2px;
-    color: black;
+    color: #444;
     list-style: none;
 }
 
@@ -29,7 +27,7 @@ li {
     min-width: 2px;
     display: inline-flex;
     align-items: center;
-
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
     background-color: rgba(255, 255, 255, 0.29);
 }
 
@@ -113,9 +111,9 @@ li {
 
 
 .btnstyle {
-    height: 50px;
-    width: 130px;
-    border-radius: 17px;
+    height: 44px;
+    width: 110px;
+    border-radius: 10px;
     font-size: 16px;
     margin: 0 1rem;
     text-align: center;
@@ -130,13 +128,16 @@ li {
 }
 
 .btnstyle:hover {
-    transition: 0.6s;
+    transition: 0.3s ease;
     background-color: rgb(255, 255, 255);
     color: black;
+    /* border: 1.5px solid; */
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
-
+.btn_gourp {
+    margin-right: 5%;
+}
 
 .mobile-menu {
     margin-left: 0;

@@ -9,6 +9,7 @@ import Blog from "../components/Blog"
 import About from "../pages/Abouts"
 import Login from "../components/Login"
 import Signup from "../components/Signup"
+import ShowDetails from "../pages/showDetails"
 
 /* import Icon react */
 import { FaMountain } from "react-icons/fa"
@@ -28,7 +29,7 @@ import { GiHamburgerMenu } from "react-icons/gi"
     })
 } 
 
-function navbar() {
+function Navbar() {
 
     return (
         <BrowserRouter>
@@ -48,7 +49,7 @@ function navbar() {
                     </ul>
                     <div className="btn_gourp">
                         <Link to='/Login'><button className="btnstyle btn_notshow">Login</button></Link>
-                        <Link to='/Signup'><button className="btnstyle btn_notshow">Signup</button></Link>
+                        <Link to='/Signup'><button className="btnstyle btn_notshow">Sign up</button></Link>
                     </div>
                     <button className='btnHumburger' id='btnHumburger' onClick={btnHumburger}><GiHamburgerMenu /></button>
                 </div>
@@ -60,6 +61,8 @@ function navbar() {
                 <Route path="/About" element={<About />} />
                 <Route path="/Login" element={<Login />} />
                 <Route path="/Signup" element={<Signup />} />
+                <Route path="/ShowDetails" element={<ShowDetails />} />
+                
             </Routes>
         </BrowserRouter>
 
@@ -69,4 +72,4 @@ function navbar() {
 
 
 
-export default navbar
+export default Navbar

@@ -1,0 +1,224 @@
+/* font-family: 'Kanit', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+#Mappos {
+    position: relative;
+}
+
+
+.containershowcard {
+    height: 140vh;
+    max-width: 1536px;
+    padding: 0 1.5rem;
+    margin-bottom: calc(20% + 50px);
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.boxPath {
+    width: 100%;
+    height: 1.5rem;
+    margin-top: 2%;
+    border: 1px rgb(230, 0, 0) solid;
+}
+
+.displaymap {
+    height: 40%;
+    width: 80%;
+    margin: 2% auto;
+    border: red 1px solid;
+}
+
+.container_detils {
+    height: 50%;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1.5rem;
+    display: inline-flex;
+    border: 1px rgb(40, 19, 19) solid;
+    justify-content: space-between;
+
+
+}
+
+.nameplace {
+    font-size: 2.2rem;
+    letter-spacing: 1.5px;
+    font-family: 'Kanit', sans-serif;
+}
+
+.title {
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+
+/* style btn level  */
+
+.btn_Hardlevel {
+    height: 30px;
+    width: 6rem;
+    letter-spacing: 1.5px;
+    font-size: 1rem;
+    font-weight: 600;
+
+    color: #D9781F;
+    border: 2px #D9781F solid;
+    border-radius: 17px;
+    background-color: white;
+
+}
+
+.btn_Easylevel {
+    height: 30px;
+    width: 6rem;
+    letter-spacing: 1.5px;
+    font-size: 1rem;
+    font-weight: 600;
+
+    color: #46D68C;
+    border: 2px #46D68C solid;
+    border-radius: 17px;
+    background-color: white;
+
+}
+
+.btn_normallevel {
+    height: 30px;
+    width: 6rem;
+    letter-spacing: 1.5px;
+    font-size: 1rem;
+    font-weight: 600;
+
+    color: #3283FD;
+    border: 2px #3283FD solid;
+    border-radius: 17px;
+
+    background-color: white;
+
+}
+
+.locationBox {
+    display: inline-flex;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+    border: red 1px solid;
+
+}
+
+.locationBox p {
+    font-size: 16px;
+}
+
+.pinicon {
+    font-size: 25px;
+    font-weight: 700;
+    color: red;
+    margin-right: 0.7rem;
+
+}
+
+.StarshowDetails {
+    height: 2rem;
+    width: auto;
+    margin-left: 5%;
+
+    /* border: red 1px solid; */
+}
+
+.iconBoxshowdetils {
+    height: 10%;
+    width: 100%;
+    margin-top: 1%;
+}
+
+
+.average_walk, .average_time {
+    height: 2rem;
+    width: 38%;
+    font-size: 16px;
+    display: inline-flex;
+    align-content: center;
+}
+
+.average_walk p, .average_time p {
+    width: auto;
+    font-size: 16px;
+    font-weight: 200;
+    text-align: left;
+    color: rgb(0, 0, 0);
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    font-family: 'Kanit', sans-serif;
+}
+
+#average_walkicon, #average_timewalk {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    color: rgb(0, 0, 0);
+    margin-bottom: 1rem;
+}
+
+
+.data_place {
+    height: max-content;
+    width: 100%;
+    letter-spacing: 1px;
+}
+
+
+.dataleft {
+    height: 50vh;
+    width: 50%;
+
+    border: 1px red solid;
+
+}
+
+.dataright {
+    height: 50vh;
+    width: 40%;
+
+    border: 1px rgb(0, 0, 0) solid;
+    padding: 1.5rem;
+
+}
+
+.details p {
+    font-size: 16px;
+    font-weight: 200;
+    margin: 1% 0;
+    letter-spacing: 1px;
+    font-family: 'Kanit', sans-serif;
+}
+
+.btnbox {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 10%;
+
+}
+
+
+
+@media (min-width: 1536px) {
+    .containershowcard {
+        max-width: 1536px;
+        margin-top: 2%;
+        margin-right: auto;
+        margin-left: auto;
+
+
+    }
+
+}

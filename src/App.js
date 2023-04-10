@@ -1,8 +1,8 @@
 import React from "react";
 
 import "./App.css";
-import Navbar from "./components/navbar"
-import Home from "./pages/Home"
+import Navbar from "./components/Navbar"
+
 
 
 function App() {

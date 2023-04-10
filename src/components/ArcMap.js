@@ -1,3 +1,4 @@
+/* eslint-disable default-case */
 import React from "react";
 import Map from "@arcgis/core/Map.js";
 import MapView from "@arcgis/core/views/MapView.js";
@@ -10,10 +11,10 @@ import BasemapToggle from "@arcgis/core/widgets/BasemapToggle.js";
 import * as locator from "@arcgis/core/rest/locator.js";
 
 
-import '../style/Arcgis.css'
+import '../styles/Arcgis.css'
 
 const ArcMap = () => {
-    esriConfig.apiKey = "AAPKf96e3d966fa547ee9e4debabd05f7e53v0Nx37R4S5uqBReazMUWuyE963vkL5LJg2Sb07c0CMKylwdfAn0WifXUrpqwFlpc";
+    esriConfig.apiKey = "AAPK134c5351fc5e4615aa16c34e5de2698ecyDZWo6r0zZmC13nbz3Qn84fMhNOP6NICpqh-zFMZfJ3K2vM7Z_EHCeHRWLsxz58";
     const maxPlaces = 25;
 
     let lastUid = 0;
@@ -29,7 +30,7 @@ const ArcMap = () => {
 
     const view = new MapView({
         map: map,
-        center: [ 100.94910344081909,13.190862364680662], // Longitude, latitude
+        center: [100.94910344081909, 13.190862364680662], // Longitude, latitude
         zoom: 14, // Zoom level
         container: "viewDiv" // Div element
     });
@@ -55,7 +56,7 @@ const ArcMap = () => {
         geometry: point,
         symbol: simpleMarkerSymbol
     });
-    
+
 
 
 
@@ -125,7 +126,7 @@ const ArcMap = () => {
         }
     });
 
-    function getPlacesGraphic(response) {
+    let getPlacesGraphic = (response) => {
         let graphic;
         if (
             response.results.length &&
@@ -137,7 +138,7 @@ const ArcMap = () => {
     }
 
     // Show clicked addresss in search
-    function reverseGeocode(pt) {
+    let reverseGeocode = (pt) => {
         const params = {
             location: pt,
         };
@@ -154,7 +155,8 @@ const ArcMap = () => {
         );
     }
     graphicsLayer.add(pointGraphic);
-    function findPlaces(pt) {
+
+    let findPlaces = (pt) => {
         if (!pt) {
             return;
         }
@@ -197,7 +199,7 @@ const ArcMap = () => {
 
 
     //////////////////////////////////////////////////
-    function showPopup(title, content, point) {
+    let showPopup = (title, content, point) => {
         content =
             content +
             "<br><br>" +
@@ -211,9 +213,7 @@ const ArcMap = () => {
         });
     }
 
-
-
-    function showHighlight(graphic) {
+    let showHighlight = (graphic) => {
         if (highlight) {
             highlight.remove();
         }
@@ -224,7 +224,7 @@ const ArcMap = () => {
         }
     }
 
-    function getIconName(category) {
+    let getIconName = (category) => {
         let iconName;
         switch (category) {
             case "Grocery":
@@ -243,16 +243,14 @@ const ArcMap = () => {
         return iconName;
     }
 
-
-
-
-
     return (
-        <body>
-            <div id="viewDiv"> </div>
-        </body>
+        <body_AcrMap>
+            <div id="viewDiv"></div>
+        </body_AcrMap>
+
     )
 };
+
 export default ArcMap;
 
 

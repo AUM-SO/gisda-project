@@ -3,6 +3,7 @@ import "../styles/Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 import Swal from "sweetalert2";
+// import Swal from "sweetalert2";
 
 const baseUrl = "http://localhost:8000/api/users/login/";
 

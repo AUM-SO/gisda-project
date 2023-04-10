@@ -1,6 +1,7 @@
 import React from 'react'
 
 import '../styles/footerstyle.css'
+
 import { Link } from 'react-router-dom'
 import { BsFacebook } from "react-icons/bs"
 
@@ -62,23 +63,14 @@ const Footer = () => {
                 <li><Link to=''>Hotel</Link ></li>
               </ul>
             </div>
-            {/* <div class="footer-col">
-                <h4>online shop</h4>
-                <ul>
-                  <li><Link to=''>watch</Link ></li>
-                  <li><Link to=''>bag</Link ></li>
-                  <li><Link to=''>shoes</Link ></li>
-                  <li><Link to=''>dress</Link ></li>
-                </ul>
-              </div> */}
+            
             <div class="footer-col">
               <h4>follow us</h4>
               <div class="social-links">
                 <Link to='https://www.facebook.com/gistda' target='_blank'><BsFacebook class='iconLinkFooter'/></Link >
                 <Link to=''><BsFacebook class='iconLinkFooter' target='_blank'/></Link >
                 <Link to=''><BsFacebook class='iconLinkFooter' target='_blank'/></Link >
-                
-                
+                  
               </div>
             </div>
           </div>
