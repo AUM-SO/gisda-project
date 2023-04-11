@@ -1,5 +1,5 @@
 /* eslint-disable default-case */
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Map from "@arcgis/core/Map.js";
 import MapView from "@arcgis/core/views/MapView.js";
 import esriConfig from "@arcgis/core/config";
@@ -9,6 +9,7 @@ import Search from "@arcgis/core/widgets/Search.js";
 import Expand from "@arcgis/core/widgets/Expand.js";
 import BasemapToggle from "@arcgis/core/widgets/BasemapToggle.js";
 import * as locator from "@arcgis/core/rest/locator.js";
+
 
 
 import '../styles/Arcgis.css'
@@ -50,7 +51,7 @@ const ArcMap = () => {
                 };
                 const simpleMarkerSymbol = {
                     type: "simple-marker",
-                    color: [226, 119, 40],  // Orange
+                    color: [255,0,0],  // Orange
                     outline: {
                         color: [255, 255, 255], // White
                         width: 1
@@ -274,5 +275,3 @@ const ArcMap = () => {
 };
 
 export default ArcMap;
-
-

@@ -1,27 +1,91 @@
-
-
-.something {
-    font-size: 8rem;
-    letter-spacing: 2px;
-
-}
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+/* font-family: 'Kanit', sans-serif; */
 
 .containerBlog {
-    height: 80vh;
-    width: 100vw;
+    min-height: 90vh;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+
+}
+
+.container_cardBlog {
+    height: max-content;
+    width: 70%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    /* padding-left: 3rem; */
+
+/* 
+    background-color: antiquewhite; */
+}
+
+.BlogArea {
+    height: max-content;
+    width: 1536px;
+    display: inline-flex;
     justify-content: center;
+    margin-bottom: 10%;
+    margin-bottom: 3%;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* background-color: red; */
+}
+
+.cardBlog {
+    height: 28rem;
+    width: 19rem;
+    background-color: white;
+    margin:1.5rem;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+
+}
+
+.cardBlog:hover {
+    transition: ease-in-out 0.7s;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+.cardBlog img {
+    height: 70%;
+    width: 100%;
+    background-color: rgb(246, 246, 246);
+    object-fit: cover;
+}
+
+.TextBlogs {
+    height: max-content;
+    padding: 1.5rem;
+}
+
+.TextBlogs h3 {
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: black;
+    font-family: 'Kanit', sans-serif;
+}
+
+.TextBlogs p {
+    color: #3f4044;
+    font-size: 14px;
 }
 
 
-.p_not {
-    letter-spacing: 10px;
-    margin-bottom: 2%;
-}
+@media (min-width: 1536px) {
+    .BlogArea {
+        max-width: 1536px;
+        margin-top: 3%;
+        margin-right: auto;
+        margin-left: auto;
+        /* padding: 1.5rem; */
+        margin-bottom: 10%;
+    }
 
-.save {
-    margin-top: 1%;
-    font-size: 12px;
+    /* .cardBlog {
+        min-width: 18rem;
+    } */
+
 }

@@ -9,7 +9,7 @@ Link {
     height: 50rem;
     width: 100%;
     overflow: hidden;
-
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,7 +73,7 @@ Link {
     width: 68%;
     text-align: center;
     margin-bottom: 5%;
-    
+
 }
 
 .underLine {
@@ -87,14 +87,14 @@ Link {
 .container_team {
     padding: 1.5rem;
     margin-top: 8%;
-
-    height: 99vh;
+    margin-bottom: 4%;
+    height: max-content;
     width: 100%;
     /* border: 1px solid rgb(4, 233, 80); */
     position: relative;
 }
 
-.title_Team{
+.title_Team {
     height: 20vh;
     width: 100%;
     /* background-color: red; */
@@ -103,7 +103,7 @@ Link {
     justify-content: center;
 
 
-    
+
 }
 
 .detalis_team h3 {
@@ -115,10 +115,12 @@ Link {
 }
 
 .container_CardTeam {
-    height: 60vh;
+    min-height: 60vh;
     width: 100%;
     display: inline-flex;
     justify-content: center;
+    flex-wrap: wrap;
+
     /* background-color: wheat; */
 }
 
@@ -127,11 +129,11 @@ Link {
     min-width: max-content;
     display: flex;
     flex-direction: column;
-
+    padding-bottom: 1rem;
     border-radius: 7px;
-    margin: 1.5rem ;
-   /*  background-color: white; */
-   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    margin: 1.5rem;
+    /*  background-color: white; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .cardteam img {
@@ -139,7 +141,7 @@ Link {
     width: 300px;
 }
 
-.cardteam p{
+.cardteam p {
     font-size: 15px;
 }
 
@@ -148,18 +150,55 @@ Link {
     margin-left: 1rem;
 }
 
+.team_textcard p {
+    margin-top: 1%;
+    font-size: small;
+}
+
 .icon_cardTeam {
     height: 30px;
-    width: 30px;
-    margin-top: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    margin-top: 8%;
 
+    display: inline-flex;
+    justify-content: start;
     
 }
 
 #iconCardteam {
-    font-size: 16px;
+    font-size: 22px;
+    margin-right: 10px;
+    color: red;
+}
+
+.NameDev {
     color: black;
+    letter-spacing: 1px;
+    font-size: larger;
+
+}
+
+@media screen and (max-width: 375px) {
+    .detalis_content h3 {
+        font-size: 11vw;
+        margin: 5% 0;
+
+    }
+
+    .detalis_content p {
+        font-size: 12px;
+    }
+
+    .team_textcard {
+        margin-top: 5%;
+        margin-left: 0;
+    }
+    
+    .cardteam  {
+        display: flex;
+        align-items: center;
+        justify-self: center;
+        min-width: 90%;
+    }
+
 }

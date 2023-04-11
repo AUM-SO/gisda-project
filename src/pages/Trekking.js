@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "../styles/Trekking.css";
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 /* import react icon  */
 import { FaWalking } from "react-icons/fa";
 import { RxClock } from "react-icons/rx";
+import {GoSettings } from "react-icons/go";
 
 /* import components */
 import Footer from "../components/Footer";
@@ -14,6 +15,8 @@ import DropdownFilter from "../components/DropdownFilter";
 
 /* import ripples */
 import Ripples from "react-ripples";
+import { Breadcrumb } from "antd";
+import { HomeOutlined, UserOutlined } from "@ant-design/icons";
 
 function Trekking() {
   const [categories, setCategories] = useState([]);
@@ -44,6 +47,7 @@ function Trekking() {
   useEffect(() => {
     fetchCardsData();
   }, []);
+  
   const options = ["Easy", "Normal", "Hard"];
 
   const fetchCategoriesData = () => {
@@ -72,13 +76,40 @@ function Trekking() {
   // console.log(locations);
   console.log(categories);
 
+  const btnfilter = () => {
+    /* const  */
+  }
+
   return (
     <>
       <div className="Trekking">
-        <div className="boxPart">apirak</div>
+      <div className="boxPart">
+          <Breadcrumb
+            items={[
+              {
+                href: "/",
+                title: <HomeOutlined />,
+              },
+              {
+                href: "/Trekking",
+                title: (
+                  <>
+                    <UserOutlined />
+                    <span>Trekking List</span>
+                  </>
+                ),
+              },
+              {
+                title: "Application",
+              },
+            ]}
+          />
+        </div>
 
         <div className="container_trekking">
+        
           <div className="filter_container">
+            
             <div className="container_Location">
               <h3 className="style_textfilter">Location</h3>
 
@@ -149,6 +180,7 @@ function Trekking() {
           </div>
           <div className="container_item">
             <div className="titleBox">
+              <button onClick={btnfilter} id="btnfilter" className="btnfilter"><GoSettings className="iconfiter"/></button>
               <div className="count_item">
                 <p>{count} placs</p>
               </div>
@@ -163,6 +195,48 @@ function Trekking() {
 
               <Ripples>
                 <Link to='/ShowDetails' className="Treak_card" >
+                  <div className="textitem">
+                    <h3>ชื่อสถานที่</h3>
+                    <div className="walk">
+                      <FaWalking id='walkicon' /><p>ระยะทาง 5.5 กิโลเมตร</p>
+                    </div>
+                    <div className="time">
+                      <RxClock id='Clock' /><p>เวลาเฉลี่ย 2 ชม.</p>
+                    </div>
+                  </div>
+                  <img src={require("../img/mountain8.png")} alt="" className='img_item zoom' />
+                </Link>
+              </Ripples>
+              <Ripples>
+                <Link to='/ArcMap' className="Treak_card" >
+                  <div className="textitem">
+                    <h3>ชื่อสถานที่</h3>
+                    <div className="walk">
+                      <FaWalking id='walkicon' /><p>ระยะทาง 5.5 กิโลเมตร</p>
+                    </div>
+                    <div className="time">
+                      <RxClock id='Clock' /><p>เวลาเฉลี่ย 2 ชม.</p>
+                    </div>
+                  </div>
+                  <img src={require("../img/mountain8.png")} alt="" className='img_item zoom' />
+                </Link>
+              </Ripples>
+              <Ripples>
+                <Link to='/ArcMap' className="Treak_card" >
+                  <div className="textitem">
+                    <h3>ชื่อสถานที่</h3>
+                    <div className="walk">
+                      <FaWalking id='walkicon' /><p>ระยะทาง 5.5 กิโลเมตร</p>
+                    </div>
+                    <div className="time">
+                      <RxClock id='Clock' /><p>เวลาเฉลี่ย 2 ชม.</p>
+                    </div>
+                  </div>
+                  <img src={require("../img/mountain8.png")} alt="" className='img_item zoom' />
+                </Link>
+              </Ripples>
+              <Ripples>
+                <Link to='/ArcMap' className="Treak_card" >
                   <div className="textitem">
                     <h3>ชื่อสถานที่</h3>
                     <div className="walk">
@@ -228,7 +302,7 @@ function Trekking() {
           </div>
         </div>
       </div>
-      <Footer />
+      
     </>
   );
 }

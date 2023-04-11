@@ -23,8 +23,12 @@ function ShowDetails() {
           apirak
         </div>
         <div className="displaymap">
+        
+        <div id="viewDiv">
+
+        <ArcMaps />
         <ButtonAcrMap />
-        <div id="viewDiv"><ArcMaps /></div>
+        </div>
           
         </div>
 

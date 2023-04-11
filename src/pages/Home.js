@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-pascal-case */
-import React/* , { useEffect, useState } */ from "react";
+import React, { useEffect, useState } from "react";
 import {
   FaStar, FaHiking, FaGasPump,
   FaParking
@@ -9,6 +9,9 @@ import { FiMapPin, FiMap } from "react-icons/fi";
 import { BiHotel } from "react-icons/bi";
 import { GiMountaintop } from "react-icons/gi";
 /* import { GrInstagram } from "react-icons/gr"; */
+
+/* import animate.css  from https://animate.style/ */
+import 'animate.css';
 
 
 import "../styles/Home.css";
@@ -27,7 +30,7 @@ import Ripples from 'react-ripples'
 
 
 const Home = () => {
-  
+
   /* const [cards, setCards] = useState([]);
 
   const fetchCardsData = () => {
@@ -46,19 +49,22 @@ const Home = () => {
     fetchCardsData();
   }, []); */
 
+ 
+
+
   return (
     <>
       <div class="header ">
         <img src={require('../img/header.jpg')} alt="" className="imghaeder" />
         <div className="container_header">
-          <h1>Trekking in EEC</h1>
-          <p >
+          <h1 className="animate__fadeInDown animate__animated animate__delay-0.7s">Trekking in EEC</h1>
+          <p className="animate__fadeInDown animate__animated animate__delay-0.8s">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             Voluptatem est sit illo! Repudiandae, libero quidem. Omnis laborum quod, tenetur rerum,
             harum nisi dolor deserunt perferendis quaerat nostrum quia, aspernatur odit!
           </p>
 
-          <div className="btn_titlse">
+          <div className="btn_titlse animate__fadeInDown animate__animated animate__delay-1s">
             <Ripples className="zoom">
               <button className="bt1 btn-primary ">details more</button>
             </Ripples>
@@ -74,6 +80,9 @@ const Home = () => {
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam
               suscipit impedit repellat aliquam unde.
             </p>
+
+            <div>
+            </div>
           </div>
         </div>
         <div className="bt2">
@@ -82,7 +91,7 @@ const Home = () => {
       </div>
 
       <div className="content2">
-        <div className="card_backgroud">
+        <div className="card_backgroud ">
           <div className="cardDetlis zoom poniter">
             <div className="imgincard ">
               <img src={require("../img/mountain1.jpg")} alt="" className="imgcard" />
@@ -158,8 +167,8 @@ const Home = () => {
         </div>
       </div>
 
-    {/* version fetch data from data base */}
-    {/* <div className="content2">
+      {/* version fetch data from data base */}
+      {/* <div className="content2">
         <>
           {cards.length > 0 && (
             <>
@@ -248,7 +257,7 @@ const Home = () => {
       </div>
       <div className="content4">
         <div className="vdo_con4">
-          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/XALYHA2OUSE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/7671sL_9tp0" title="GISTDA แนะนำองค์กร 2021" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <div className="textcon4">
           <h1>Trekking for you</h1>

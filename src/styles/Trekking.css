@@ -19,6 +19,25 @@
     background-color: rgb(255, 255, 255);
 }
 
+.btnfilter {
+    height: 2.5rem;
+    width: 3rem;
+    border-radius: 7px;
+    background-color: white;
+    display: none;
+    text-align: center;
+
+}
+
+.btnfilter:hover {
+    background-color: rgba(255, 255, 248, 0.375);
+}
+
+.iconfiter {
+    font-size: 1.5rem;
+    color: #1c1c1c;
+}
+
 .filter_container {
     height: 100%;
     min-width: 22rem;
@@ -70,11 +89,15 @@
     margin-bottom: 1%;
 }
 
+
+.count_item {
+    margin-left: 5%;
+}
+
 .dropdown {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
 }
 
 /* stype filter box */
@@ -85,14 +108,18 @@
 }
 
 .container_showitem {
+
     height: 100%;
     width: 100%;
-    display: inline-flex;
+    /* margin-top: 3%; */
+    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-content: flex-start;
+    
     /* background-color: rgb(9, 226, 67); */
     justify-content: flex-start;
+
 }
 
 .inputstyle {
@@ -110,8 +137,8 @@
 }
 
 .Treak_card {
-    min-height: 25rem;
-    max-width: 18.5rem;
+    height: 25rem;
+    width: 20rem;
     background-color: rgb(255, 255, 255);
     color: rgb(63, 64, 68);
     border-radius: 7px;
@@ -124,19 +151,23 @@
     height: 100%;
     width: 100%;
     object-fit: none;
+    
 }
 
 
 .textitem {
-    height: 20%;
+
+    height: 37%;
     width: 70%;
     padding: 1rem;
     position: absolute;
     display: flex;
-    bottom: 20%;
+    bottom: 3%;
     flex-direction: column;
     align-items: start;
-    z-index: 10;
+    z-index: 11;
+    
+
 }
 
 .textitem h3 {
@@ -145,6 +176,7 @@
     margin-bottom: 2%;
     font-family: 'Kanit', sans-serif;
     letter-spacing: 2px;
+    
 }
 
 .walk, .time {
@@ -177,13 +209,54 @@
 
 
 
+
+
 @media (min-width: 1536px) {
     .Trekking {
         max-width: 1536px;
         margin-top: 2%;
         margin-right: auto;
         margin-left: auto;
+        margin-bottom: 10%;
 
     }
 
+}
+
+@media screen and (max-width: 1200px) { 
+    .filter_container {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 905px) {
+
+    .btnfilter {
+        display: block;
+        position: absolute;
+        
+        right: 10%;
+    }
+
+    .count_item {
+        position: absolute;
+        
+        left: 10%;
+    }
+
+    .dropdown {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    
+}
+
+
+@media screen and (max-width: 320px) {
+    .Treak_card {
+
+    }
 }
