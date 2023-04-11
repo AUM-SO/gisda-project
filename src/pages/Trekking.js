@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 /* import react icon  */
 import { FaWalking } from "react-icons/fa";
 import { RxClock } from "react-icons/rx";
-import {GoSettings } from "react-icons/go";
+import { HiOutlineAdjustments } from "react-icons/hi";
 
 /* import components */
 import Footer from "../components/Footer";
@@ -47,7 +47,7 @@ function Trekking() {
   useEffect(() => {
     fetchCardsData();
   }, []);
-  
+
   const options = ["Easy", "Normal", "Hard"];
 
   const fetchCategoriesData = () => {
@@ -83,7 +83,7 @@ function Trekking() {
   return (
     <>
       <div className="Trekking">
-      <div className="boxPart">
+        <div className="boxPart">
           <Breadcrumb
             items={[
               {
@@ -107,9 +107,9 @@ function Trekking() {
         </div>
 
         <div className="container_trekking">
-        
+
           <div className="filter_container">
-            
+
             <div className="container_Location">
               <h3 className="style_textfilter">Location</h3>
 
@@ -178,9 +178,12 @@ function Trekking() {
               ))}
             </div>
           </div>
-          <div className="container_item">
+
+          <div className="content_left">
             <div className="titleBox">
-              <button onClick={btnfilter} id="btnfilter" className="btnfilter"><GoSettings className="iconfiter"/></button>
+              <button onClick={btnfilter} id="btnfilter" className="btnfilter">
+                <HiOutlineAdjustments className="iconfiter" />
+              </button>
               <div className="count_item">
                 <p>{count} placs</p>
               </div>
@@ -188,74 +191,34 @@ function Trekking() {
                 <p>level : </p>
                 <DropdownFilter options={options} />
               </div>
+
+            </div>
+            <div className="underLinetr"></div>
+
+            <div className="container_item">
+              <Ripples className="card">
+                <Link>
+                  <h3 className="textcard">ชื่อเขา</h3>
+                  <div className="walk">
+                    <FaWalking id="walkicon" />
+                    <p> ระยะทาง 5.5 กิโลเมตร</p>
+                  </div>
+                  <div className="time">
+                    <RxClock id="Clock" />
+                    <p>เวลาเฉลี่ย 2 ชม.</p>
+                  </div>
+                  <img src={require("../img/mountain2.jpg")} alt="" />
+                </Link>
+              </Ripples>
+
             </div>
 
-            {/*  พื้นที่แสดง cards */}
-            <div className="container_showitem">
-
-              <Ripples>
-                <Link to='/ShowDetails' className="Treak_card" >
-                  <div className="textitem">
-                    <h3>ชื่อสถานที่</h3>
-                    <div className="walk">
-                      <FaWalking id='walkicon' /><p>ระยะทาง 5.5 กิโลเมตร</p>
-                    </div>
-                    <div className="time">
-                      <RxClock id='Clock' /><p>เวลาเฉลี่ย 2 ชม.</p>
-                    </div>
-                  </div>
-                  <img src={require("../img/mountain8.png")} alt="" className='img_item zoom' />
-                </Link>
-              </Ripples>
-              <Ripples>
-                <Link to='/ArcMap' className="Treak_card" >
-                  <div className="textitem">
-                    <h3>ชื่อสถานที่</h3>
-                    <div className="walk">
-                      <FaWalking id='walkicon' /><p>ระยะทาง 5.5 กิโลเมตร</p>
-                    </div>
-                    <div className="time">
-                      <RxClock id='Clock' /><p>เวลาเฉลี่ย 2 ชม.</p>
-                    </div>
-                  </div>
-                  <img src={require("../img/mountain8.png")} alt="" className='img_item zoom' />
-                </Link>
-              </Ripples>
-              <Ripples>
-                <Link to='/ArcMap' className="Treak_card" >
-                  <div className="textitem">
-                    <h3>ชื่อสถานที่</h3>
-                    <div className="walk">
-                      <FaWalking id='walkicon' /><p>ระยะทาง 5.5 กิโลเมตร</p>
-                    </div>
-                    <div className="time">
-                      <RxClock id='Clock' /><p>เวลาเฉลี่ย 2 ชม.</p>
-                    </div>
-                  </div>
-                  <img src={require("../img/mountain8.png")} alt="" className='img_item zoom' />
-                </Link>
-              </Ripples>
-              <Ripples>
-                <Link to='/ArcMap' className="Treak_card" >
-                  <div className="textitem">
-                    <h3>ชื่อสถานที่</h3>
-                    <div className="walk">
-                      <FaWalking id='walkicon' /><p>ระยะทาง 5.5 กิโลเมตร</p>
-                    </div>
-                    <div className="time">
-                      <RxClock id='Clock' /><p>เวลาเฉลี่ย 2 ชม.</p>
-                    </div>
-                  </div>
-                  <img src={require("../img/mountain8.png")} alt="" className='img_item zoom' />
-                </Link>
-              </Ripples>
-              
-              <>
-                {cards.length > 0 && (
-                  <>
-                    {cards.map((cards) => (
-                      <>
-                        {/* <Ripples>
+            <>
+              {cards.length > 0 && (
+                <>
+                  {cards.map((cards) => (
+                    <>
+                      {/* <Ripples>
                           <button className="Treak_card ">
                             <div className="textitem">
                               <h3 key={cards.id}>{cards.title}</h3>
@@ -272,37 +235,40 @@ function Trekking() {
                           </button>
                         </Ripples> */}
 
-                        <Ripples>
-                          <Link to='/ShowDetails' className="Treak_card" >
-                            <div className="textitem">
-                              <h3 key={cards.id}>{cards.title}</h3>
-                              <div className="walk">
-                                <FaWalking id='walkicon' />
-                                <p>ระยะทาง 5.5 กิโลเมตร</p>
-                              </div>
-                              <div className="time">
-                                <RxClock id='Clock' />
-                                <p>เวลาเฉลี่ย 2 ชม.</p>
-                              </div>
+                      <Ripples>
+                        <Link to='/ShowDetails' className="Treak_card" >
+                          <div className="textitem">
+                            <h3 key={cards.id}>{cards.title}</h3>
+                            <div className="walk">
+                              <FaWalking id='walkicon' />
+                              <p>ระยะทาง 5.5 กิโลเมตร</p>
                             </div>
-                            <img
-                              key={cards.id}
-                              src={cards.cover_image}
-                              className="img_item zoom"
-                            />
-                          </Link>
-                        </Ripples>
+                            <div className="time">
+                              <RxClock id='Clock' />
+                              <p>เวลาเฉลี่ย 2 ชม.</p>
+                            </div>
+                          </div>
+                          <img
+                            key={cards.id}
+                            src={cards.cover_image}
+                            className="img_item zoom"
+                          />
+                        </Link>
+                      </Ripples>
 
-                      </>
-                    ))}
-                  </>
-                )}
-              </>
-            </div>
+                    </>
+                  ))}
+                </>
+              )}
+            </>
           </div>
         </div>
       </div>
-      
+
+
+
+
+      <Footer />
     </>
   );
 }

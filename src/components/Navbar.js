@@ -20,8 +20,10 @@ import DetalisBlogs4 from '../pages/DetalisBlogs4'
 /* import Icon react */
 import { FaMountain } from "react-icons/fa"
 import { GiHamburgerMenu } from "react-icons/gi"
+import { HiX } from "react-icons/hi"
 import { useRef } from 'react';
 import { useEffect } from 'react';
+import { getActiveElement } from '@testing-library/user-event/dist/utils';
 
 
 /* function btnHumburger() {
@@ -38,20 +40,40 @@ import { useEffect } from 'react';
 
 
 function Navbar() {
-    const [isOpen, setIsOpen] = useState(false);
-    let burgerbtn = document.getElementById('btnHumburger')
-    let navLink = document.getElementById('nav-Link')
+    /* const [isOpen, setIsOpen] = useState(true);
     const toggleMenu = () => {
         setIsOpen(!isOpen);
-        console.log(burgerbtn)
+        let burgerbtn = document.getElementById('btnHumburger')
+        let navLink = document.getElementById('nav-Link')
+
 
         burgerbtn.addEventListener('click', () => {
             navLink.classList.toggle('moblie-manu')
         })
     };
+    useEffect(() => {
+        toggleMenu();
+      }, []);
+       */
 
 
-    
+    /* const [isOpen, setIsOpen] = useState(false); */
+
+    /* const btnHumburger = () => {
+         setIsOpen(!isOpen); 
+        if(document.getElementById('popup').style.display === "none" ){
+            document.getElementById('popup').style.display = "block"
+        } 
+    }; */
+
+    const [toggle, setToggle] = useState(true);
+
+    const handleClick = () => {
+        setToggle(!toggle)
+        
+    };
+
+
 
     return (
         <BrowserRouter>
@@ -61,7 +83,7 @@ function Navbar() {
                     <Link to='/'><h1>Trekking</h1></Link>
                 </div>
                 <div className="container">
-                    <ul className="nav-Link  " id='nav-Link'>
+                    <ul className="nav-Link " id='nav-Link'>
                         <NavLink to='/' className='manu-nav underline-link'><li>Home</li></NavLink>
                         <NavLink to='/Trekking' className='manu-nav underline-link'><li >Trekking</li></NavLink>
                         <NavLink to='/Blog' className='manu-nav underline-link'><li>Blog</li></NavLink>
@@ -75,15 +97,25 @@ function Navbar() {
                         <button className="btnstyle btn_notshow notshow" id='Logout'>Log out</button>
                     </div>
 
-                    
-                    <button className='btnHumburger' id='btnHumburger' onClick={toggleMenu}><GiHamburgerMenu /></button>
-                        
-                    
-                    
+                    <button onClick={handleClick} className='btnHumburger' id='btnHumburger'>
+                        <GiHamburgerMenu className='iconBurger' /><HiX className='iconclose' />
+                    </button>
+
+                    <ul class="list-group popupBurger" style={{ display: toggle ? 'none' : 'block' }}>
+                        <div className="backpop">
+                            <NavLink to='/' className='manu-nav underline-link'><li>Home</li></NavLink>
+                            <NavLink to='/Trekking' className='manu-nav underline-link'><li >Trekking</li></NavLink>
+                            <NavLink to='/Blog' className='manu-nav underline-link'><li>Blog</li></NavLink>
+                            <NavLink to='/About' className='manu-nav underline-link'><li>About</li></NavLink>
+                            <NavLink to='/Login' className='manu-nav notshow '><li>Login</li></NavLink>
+                            <NavLink to='/Signup' className='manu-nav notshow '><li>Signup</li></NavLink>
+                        </div>
 
 
-                    
-                    {/* <button className='btnHumburger' id='btnHumburger' onClick={btnHumburger}><GiHamburgerMenu /></button> */}
+                        <button className="btnclose"></button>
+                    </ul>
+
+
                 </div>
             </div>
             <Routes>
@@ -105,8 +137,6 @@ function Navbar() {
 
     )
 }
-
-
 
 
 export default Navbar

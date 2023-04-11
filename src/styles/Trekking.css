@@ -72,11 +72,27 @@
 }
 
 .container_item {
-    height: max-content;
+    height: 110rem;
     width: 100%;
     padding: 1.5rem;
-    /* background-color: rgb(255, 255, 255); */
-    /* border: 1px solid;   */
+    background-color: rgb(222, 222, 222);
+    position: relative;
+    margin-top: 1%;
+}
+
+.content_left {
+    height: 110rem;
+    width: 100%;
+    margin-left: 3%;
+}
+
+
+.underLinetr {
+    width: 100%;
+    border-bottom: solid #c7c7c7eb 1px;
+    border-radius: 2px;
+    background-color: #c7c7c7eb;
+    
 }
 
 .titleBox {
@@ -109,14 +125,14 @@
 
 .container_showitem {
 
-    height: 100%;
-    width: 100%;
+    height: 25rem;
+    width: 20rem;
     /* margin-top: 3%; */
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-content: flex-start;
-    
+
     /* background-color: rgb(9, 226, 67); */
     justify-content: flex-start;
 
@@ -136,9 +152,22 @@
     margin-right: 3%;
 }
 
+.backCardtrekk {
+    height: 100%;
+    width: 100%;
+}
+
+.card {
+    max-height: 24rem;
+    max-width: 18rem;
+    border-radius: 7px;
+    
+    overflow: hidden;
+}
+
 .Treak_card {
-    height: 25rem;
-    width: 20rem;
+    max-height: 26rem;
+    max-width: 20rem;
     background-color: rgb(255, 255, 255);
     color: rgb(63, 64, 68);
     border-radius: 7px;
@@ -151,7 +180,7 @@
     height: 100%;
     width: 100%;
     object-fit: none;
-    
+
 }
 
 
@@ -166,7 +195,7 @@
     flex-direction: column;
     align-items: start;
     z-index: 11;
-    
+
 
 }
 
@@ -176,7 +205,7 @@
     margin-bottom: 2%;
     font-family: 'Kanit', sans-serif;
     letter-spacing: 2px;
-    
+
 }
 
 .walk, .time {
@@ -223,7 +252,7 @@
 
 }
 
-@media screen and (max-width: 1200px) { 
+@media screen and (max-width: 1200px) {
     .filter_container {
         display: none;
     }
@@ -234,13 +263,13 @@
     .btnfilter {
         display: block;
         position: absolute;
-        
+
         right: 10%;
     }
 
     .count_item {
         position: absolute;
-        
+
         left: 10%;
     }
 
@@ -249,14 +278,9 @@
     }
 }
 
-@media screen and (max-width: 768px) {
-
-    
-}
+@media screen and (max-width: 768px) {}
 
 
 @media screen and (max-width: 320px) {
-    .Treak_card {
-
-    }
+    .Treak_card {}
 }

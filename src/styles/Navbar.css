@@ -79,7 +79,7 @@ li {
     height: 4px;
     border-radius: 3px;
     background-color: black;
-    transition: width 0.4s ease-in-out;
+    transition: width 0.9s ease-in-out;
 }
 
 .underline-link:hover::before {
@@ -140,16 +140,19 @@ li {
 .mobile-menu {
     margin-left: 0;
     display: none;
+}
 
+.iconclose {
+    display: none;
+}
+
+.popupBurger {
+    display: none;
 }
 
 @media screen and (max-width: 1200px) {
 
     .notshow {
-        display: block;
-    }
-
-    .btn_notshow {
         display: none;
     }
 
@@ -160,10 +163,12 @@ li {
         left: 0;
         display: inline-flex;
         z-index: 1;
-
-
     }
 
+    .nav-Link, .btnstyle{
+        display: none;
+    }
+    
     .btnHumburger {
         height: 50px;
         width: 50px;
@@ -172,33 +177,44 @@ li {
         justify-content: center;
         font-size: 20px;
         border-radius: 10px;
-        position: absolute;
+        position: relative;
         top: 20px;
-        right: 10%;
+        right: 2%;
         background-color: white;
         z-index: 0;
         box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     }
 
-    .manu-nav {
-        padding: 10px;
 
+    .backpop {
+        display: flex;
+        flex-direction: column;
+        height: 100rem;
+        width: 50%;
+        background-color: rgba(255, 255, 255, 0.31);
+        position: absolute;
+        right: 0;
     }
 
-    .nav-Link {
-        height: 110vh ;
-        width: 40%;
-        /* min-width: 250px; */
+    .manu-nav {
+        padding: 10px;
+    }
+    .list-group popupBurger {
+        background-color: red;
+    }
+    .popupBurger {
+        height: 50px;
+        width: 10%;
         
-        backdrop-filter: blur(17px);
-        background-color: rgb(255, 255, 255);
+        /*background-color: rgba(255, 255, 255, 0.324);
         box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
         margin: 0px;
         right: 0;
-        border-radius: 0 0 0 17px;
+        border-radius: 0 0 0 17px; */
+    }
+
+    .popup {
         display: none;
-        flex-direction: column;
-        
     }
 
     .nav-Link::after {
@@ -209,15 +225,12 @@ li {
     .moblie-manu {
         top: 0;
         position: fixed;
-        display: flex;
+        
         max-height: 53rem;
         justify-content: center;
         align-items: center;
         z-index: 0;
-
-
     }
-
 
     .close-manu {
         display: none;
