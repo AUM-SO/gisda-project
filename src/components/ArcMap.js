@@ -36,7 +36,7 @@ const ArcMap = () => {
 
                 const view = new MapView({
                     map: map,
-                    center: [100.94910344081909, 13.190862364680662], // Longitude, latitude
+                    center: [102.33944052488764, 12.009137756916266], // Longitude, latitude 12.009137756916266, 102.33944052488764
                     zoom: 14, // Zoom level
                     container: "viewDiv" // Div element
                 });
@@ -46,8 +46,8 @@ const ArcMap = () => {
 
                 const point = { //Create a point
                     type: "point",
-                    longitude: 100.94910344081909,
-                    latitude: 13.190862364680662
+                    longitude: 102.33944052488764,
+                    latitude: 12.009137756916266
                 };
                 const simpleMarkerSymbol = {
                     type: "simple-marker",
