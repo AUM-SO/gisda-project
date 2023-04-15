@@ -5,31 +5,7 @@ import "../styles/Signup.css";
 import { Link, useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 import Swal from "sweetalert2";
-
-const baseUrl = "http://localhost:8000/api/users/register/";
-
-async function postData(url = "", data = {}) {
-  const token = Cookies.get("token");
-  var headers = {
-    "Content-Type": "application/json",
-  };
-  if (token) {
-    headers.Authorization = `Token ${token}`;
-  }
-
-  // Default options are marked with *
-  const response = await fetch(url, {
-    method: "POST", // *GET, POST, PUT, DELETE, etc.
-    mode: "cors", // no-cors, *cors, same-origin
-    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: "same-origin", // include, *same-origin, omit
-    headers: headers,
-    redirect: "follow", // manual, *follow, error
-    referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-    body: JSON.stringify(data), // body data type must match "Content-Type" header
-  });
-  return response.json(); // parses JSON response into native JavaScript objects
-}
+import axios from "axios";
 
 function Signup() {
   const [formData, setFormData] = useState({
@@ -47,11 +23,13 @@ function Signup() {
     e.preventDefault();
     {
       try {
-        const res = await postData(baseUrl, formData);
-        if (res.token) {
-          Cookies.set("token", res.token);
-          Swal.fire("The Internet?", "That thing is still around?", "success");
+        const res = await axios.post("https://trekking.gistda.or.th/api/users/register/", formData)
+        if (res.data.token) {
+          Cookies.set("token", res.data.token);
+          Swal.fire("Success?", "Register Successful", "success");
           navigate("/");
+        } else {
+          Swal.fire("Error?", res.detail || "Server Error", "error");
         }
       } catch (err) {
         console.log(err);

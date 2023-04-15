@@ -23,6 +23,8 @@ import ScrollToTopButton from '../components/ScrollToTopButton';
 
 /* import ripples */
 import Ripples from 'react-ripples'
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 /* Function ScrollToTopButton */
 
@@ -31,23 +33,19 @@ import Ripples from 'react-ripples'
 
 const Home = () => {
 
-  /* const [cards, setCards] = useState([]);
+  const [posts, setPost] = useState([]);
 
   const fetchCardsData = () => {
-    fetch("http://localhost:3000/api/posts")
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setCards(data.results);
-        // console.log(data)
-        // console.log(cards.results.description)
+    axios.get("https://trekking.gistda.or.th/api/posts").then((data) => {
+        setPost(data.data.results.slice(0,3));
       });
   };
 
   useEffect(() => {
     fetchCardsData();
-  }, []); */
+  }, []);
+
+
 
  
 
@@ -86,85 +84,37 @@ const Home = () => {
           </div>
         </div>
         <div className="bt2">
-          <button>View All</button>
+          <Link to="/Trekking"><button>View All</button></Link>
         </div>
       </div>
 
       <div className="content2">
-        <div className="card_backgroud ">
-          <div className="cardDetlis zoom poniter">
-            <div className="imgincard ">
-              <img src={require("../img/mountain1.jpg")} alt="" className="imgcard" />
-            </div>
-            <div className="container_text">
-              <h3 className="texttitle textponsition">ผาหินกูบ </h3>
-              <div className="Loction_box ">
-                <i><FiMapPin className="pin_icon" /></i><p>Barcelona, España</p>
+        {posts.map(post => (
+          <div className="card_backgroud " key={post.id}>
+            <div className="cardDetlis zoom poniter">
+              <div className="imgincard ">
+                <img src={post.cover_image} alt="" className="imgcard" />
               </div>
-              <div className="detils_place">
-                <p className="p_card">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              </div>
-              <div className="iconStar">
-                <i><FaStar className="star_detilse" /></i>
-                <i><FaStar className="star_detilse" /></i>
-                <i><FaStar className="star_detilse" /></i>
-                <i><FaStar className="star_detilse" /></i>
-              </div>
-              <button className="btn_Easy">Easy</button>
-            </div>
-
-          </div>
-        </div>
-
-        <div className="card_backgroud">
-          <div className="cardDetlis zoom poniter">
-            <div className="imgincard ">
-              <img src={require("../img/mountain2.jpg")} alt="" className="imgcard" />
-            </div>
-            <div className="container_text">
-              <h3 className="texttitle textponsition">ผาหินกูบ </h3>
-              <div className="Loction_box ">
-                <i><FiMapPin className="pin_icon" /></i><p>Barcelona, España</p>
+              <div className="container_text">
+                <h3 className="texttitle textponsition">{post.title}</h3>
+                <div className="Loction_box ">
+                  <i><FiMapPin className="pin_icon" /></i><p>{post.location}</p>
+                </div>
+                <div className="detils_place">
+                  <p className="p_card">{post.description}</p>
+                </div>
+                <div className="iconStar">
+                  <i><FaStar className="star_detilse" /></i>
+                  <i><FaStar className="star_detilse" /></i>
+                  <i><FaStar className="star_detilse" /></i>
+                  <i><FaStar className="star_detilse" /></i>
+                </div>
+                <button className="btn_Easy">{post.level}</button>
               </div>
 
-              <div className="detils_place">
-                <p className="p_card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, autem.</p>
-              </div>
-              <div className="iconStar">
-                <i><FaStar className="star_detilse" /></i>
-                <i><FaStar className="star_detilse" /></i>
-                <i><FaStar className="star_detilse" /></i>
-                <i><FaStar className="star_detilse" /></i>
-              </div>
-              <button className="btn_normal">Normal</button>
             </div>
           </div>
-        </div>
-
-        <div className="card_backgroud">
-          <div className="cardDetlis zoom poniter">
-            <div className="imgincard ">
-              <img src={require("../img/mountain5.jpg")} alt="" className="imgcard" />
-            </div>
-            <div className="container_text">
-              <h3 className="texttitle textponsition">ผาหินกูบ </h3>
-              <div className="Loction_box ">
-                <i><FiMapPin className="pin_icon" /></i><p>Barcelona, España</p>
-              </div>
-              <div className="detils_place">
-                <p className="p_card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni!</p>
-              </div>
-              <div className="iconStar">
-                <i><FaStar className="star_detilse" /></i>
-                <i><FaStar className="star_detilse" /></i>
-                <i><FaStar className="star_detilse" /></i>
-                <i><FaStar className="star_detilse" /></i>
-              </div>
-              <button className="btn_Hard" >Hard</button>
-            </div>
-          </div>
-
-        </div>
+        ))}
       </div>
 
       {/* version fetch data from data base */}

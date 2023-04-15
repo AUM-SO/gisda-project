@@ -3,28 +3,9 @@ import "../styles/Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 import Swal from "sweetalert2";
+import axios from "axios";
 // import Swal from "sweetalert2";
 
-const baseUrl = "http://localhost:8000/api/users/login/";
-
-async function postData(url = "", data = {}, headers = {}) {
-  var default_headers = {
-    "Content-Type": "application/json",
-  };
-
-  // Default options are marked with *
-  const response = await fetch(url, {
-    method: "POST", // *GET, POST, PUT, DELETE, etc.
-    mode: "cors", // no-cors, *cors, same-origin
-    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: "same-origin", // include, *same-origin, omit
-    headers: { ...default_headers, ...headers },
-    redirect: "follow", // manual, *follow, error
-    referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-    body: JSON.stringify(data), // body data type must match "Content-Type" header
-  });
-  return response.json(); // parses JSON response into native JavaScript objects
-}
 function Login() {
   const [formData, setFormData] = useState({
     email: "",
@@ -39,21 +20,22 @@ function Login() {
     e.preventDefault();
     {
       try {
-        const res = await postData(
-          baseUrl,
+        const res = await axios.post(
+          "https://trekking.gistda.or.th/api/users/login/",
           {},
           {
-            Authorization: `Basic ${btoa(
-              `${formData.email}:${formData.password}`
-            )}`,
+            auth: {
+              username: formData.email,
+              password: formData.password
+            }
           }
         );
         if (res.token) {
-          Swal.fire("Success?", "Alert successful", "success");
+          Swal.fire("Success?", "Login Successful", "success");
           navigate("/");
           Cookies.set("token", res.token);
         } else {
-          Swal.fire("Error?", "Alert error", "error");
+          Swal.fire("Error?", res.detail || "Server Error", "error");
         }
       } catch (err) {
         console.log(err);

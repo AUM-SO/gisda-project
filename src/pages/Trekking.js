@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 /* import react icon  */
 import { FaWalking } from "react-icons/fa";
 import { RxClock } from "react-icons/rx";
-import { HiOutlineAdjustments } from "react-icons/hi";
+import {GoSettings } from "react-icons/go";
 
 /* import components */
 import Footer from "../components/Footer";
@@ -18,9 +18,15 @@ import Ripples from "react-ripples";
 import { Breadcrumb } from "antd";
 import { HomeOutlined, UserOutlined } from "@ant-design/icons";
 
+/* api libs */
+import axios from "axios";
+
+import * as qs from "qs";
+
 function Trekking() {
   const [categories, setCategories] = useState([]);
-  const [cards, setCards] = useState([]);
+  const [filter, setFilter] = useState({categories: []});
+  const [posts, setPost] = useState([]);
   const [count, setCount] = useState([]);
 
   const optionscheckboxDistance = [
@@ -34,29 +40,28 @@ function Trekking() {
     { label: "Hard", value: "Level-Hard" },
   ];
 
-  const fetchCardsData = () => {
-    fetch("http://localhost:3000/api/posts")
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setCards(data.results);
-        setCount(data.count);
+  const fetchCardsData = (query={}) => {
+    console.log('--->', query)
+    axios.get("https://trekking.gistda.or.th/api/posts", {
+      params: query,
+      paramsSerializer: params => {
+        return qs.stringify(params, {arrayFormat: 'repeat'})
+      }
+    }).then((data) => {
+        setPost(data.data.results);
+        setCount(data.data.count);
       });
   };
   useEffect(() => {
     fetchCardsData();
   }, []);
-
+  
   const options = ["Easy", "Normal", "Hard"];
 
   const fetchCategoriesData = () => {
-    fetch("http://localhost:3000/api/categories/")
-      .then((response) => {
-        return response.json();
-      })
+    axios.get("https://trekking.gistda.or.th/api/categories/")
       .then((data) => {
-        setCategories(data.results);
+        setCategories(data.data.results);
       });
   };
   useEffect(() => {
@@ -65,16 +70,28 @@ function Trekking() {
 
   const handleCheckboxChange = (event) => {
     const data = event.target.value;
+    let params = {}
     if (event.target.checked) {
-      setCategories([...categories, data]);
+      params = {...filter, categories:[...filter.categories, data]}
+      setFilter({...filter, categories:[...filter.categories, data]});
       console.log("✅ Checkbox is checked");
     } else {
-      setCategories(categories.filter((categories) => categories !== data));
+  
+      let categories =  filter.categories || []
+      let index = categories.indexOf(data)
+      if (index >= 0) {
+        categories.splice(index, 1)
+        filter.categories = categories;
+      }
+      params = {...filter, categories}
+      setFilter({...filter, categories});
       console.log("⛔️ Checkbox is NOT checked");
     }
+    fetchCardsData(params);
   };
   // console.log(locations);
-  console.log(categories);
+  // console.log(categories);
+  console.log(filter);
 
   const btnfilter = () => {
     /* const  */
@@ -83,7 +100,7 @@ function Trekking() {
   return (
     <>
       <div className="Trekking">
-        <div className="boxPart">
+      <div className="boxPart">
           <Breadcrumb
             items={[
               {
@@ -107,118 +124,105 @@ function Trekking() {
         </div>
 
         <div className="container_trekking">
-
+        
           <div className="filter_container">
-
+            
             <div className="container_Location">
               <h3 className="style_textfilter">Location</h3>
 
-              {categories.map((categories) => (
-                <div key={categories.id}>
-                  <input
-                    type="checkbox"
-                    value={categories.id}
-                    // checked={locations.includes(setLocations)}
-                    className={"style_labelfilter"}
-                    onChange={handleCheckboxChange}
-                  />
-                  &nbsp;&nbsp;&nbsp;
-                  <label htmlFor="checkbox" className="style_labelfilter">
-                    {categories.title}
-                  </label>
-                </div>
-              ))}
+              {categories.filter(c => c.namespace === "location").map((categories) => (
+                    <div key={categories.id}>
+                      <input
+                        type="checkbox"
+                        value={categories.id}
+                        // checked={filter.categories.indexOf(categories.id) >= 0}
+                        className={"style_labelfilter"}
+                        onChange={handleCheckboxChange}
+                      />
+                      &nbsp;&nbsp;&nbsp;
+                      <label htmlFor="checkbox" className="style_labelfilter">
+                        {categories.title}
+                      </label>
+                    </div>
+                  ))}
             </div>
 
             <div className="container_Distance ">
               <h3 className="style_textfilter">Distance</h3>
-              {optionscheckboxDistance.map((optionscheckboxDistance) => (
-                <div key={optionscheckboxDistance.value}>
-                  <input
-                    type="checkbox"
-                    id={optionscheckboxDistance.value}
-                    name={optionscheckboxDistance.value}
-                    value={optionscheckboxDistance.value}
-                    className={"Distance"}
-                    checked={categories.includes(optionscheckboxDistance.value)}
-                    onChange={handleCheckboxChange}
-                  />
-                  &nbsp;&nbsp;&nbsp;
-                  <label
-                    htmlFor={optionscheckboxDistance.value}
-                    className="style_labelfilter"
-                  >
-                    {optionscheckboxDistance.label}
-                  </label>
-                </div>
-              ))}
+              {categories.filter(w => w.namespace === "distance").map((categories) => (
+                    <div key={categories.id}>
+                      <input
+                        type="checkbox"
+                        value={categories.id}
+                        // checked={filter.categories.indexOf(categories.id) >= 0}
+                        className={"style_labelfilter"}
+                        onChange={handleCheckboxChange}
+                      />
+                      &nbsp;&nbsp;&nbsp;
+                      <label htmlFor="checkbox" className="style_labelfilter">
+                        {categories.title}
+                      </label>
+                    </div>
+                  ))}
             </div>
 
             <div className="container_level">
-              <h3 className="style_textfilter">Level</h3>
-              {optionscheckboxLevel.map((optionscheckboxLevel) => (
-                <div key={optionscheckboxLevel.value}>
-                  <input
-                    type="checkbox"
-                    className="inputstyle"
-                    id={optionscheckboxLevel.value}
-                    name={optionscheckboxLevel.value}
-                    value={optionscheckboxLevel.value}
-                    checked={categories.includes(optionscheckboxLevel.value)}
-                    onChange={handleCheckboxChange}
-                  />
-                  &nbsp;&nbsp;&nbsp;
-                  <label
-                    htmlFor={optionscheckboxLevel.value}
-                    className="style_labelfilter"
-                  >
-                    {optionscheckboxLevel.label}
-                  </label>
-                </div>
-              ))}
+              {/* <h3 className="style_textfilter">Level</h3> */}
+              {categories.filter(a => a.namespace === "level").map((categories) => (
+                    <div key={categories.id}>
+                      <input
+                        type="checkbox"
+                        value={categories.id}
+                        // checked={filter.categories.indexOf(categories.id) >= 0}
+                        className={"style_labelfilter"}
+                        onChange={handleCheckboxChange}
+                      />
+                      &nbsp;&nbsp;&nbsp;
+                      <label htmlFor="checkbox" className="style_labelfilter">
+                        {categories.title}
+                      </label>
+                    </div>
+                  ))}
+            </div>
+            <div className="container_level">
+            <h3 className="style_textfilter">Average Time</h3>
+                {categories.filter(z => z.namespace === "avg_time").map((categories) => (
+                    <div key={categories.id}>
+                      <input
+                        type="checkbox"
+                        value={categories.id}
+                        // checked={filter.categories.indexOf(categories.id) >= 0}
+                        className={"style_labelfilter"}
+                        onChange={handleCheckboxChange}
+                      />
+                      &nbsp;&nbsp;&nbsp;
+                      <label htmlFor="checkbox" className="style_labelfilter">
+                        {categories.title}
+                      </label>
+                    </div>
+                  ))}
             </div>
           </div>
-
-          <div className="content_left">
+          <div className="container_item">
             <div className="titleBox">
-              <button onClick={btnfilter} id="btnfilter" className="btnfilter">
-                <HiOutlineAdjustments className="iconfiter" />
-              </button>
+              <button onClick={btnfilter} id="btnfilter" className="btnfilter"><GoSettings className="iconfiter"/></button>
               <div className="count_item">
                 <p>{count} placs</p>
               </div>
-              <div className="dropdown">
+              {/* <div className="dropdown">
                 <p>level : </p>
                 <DropdownFilter options={options} />
-              </div>
-
-            </div>
-            <div className="underLinetr"></div>
-
-            <div className="container_item">
-              <Ripples className="card">
-                <Link>
-                  <h3 className="textcard">ชื่อเขา</h3>
-                  <div className="walk">
-                    <FaWalking id="walkicon" />
-                    <p> ระยะทาง 5.5 กิโลเมตร</p>
-                  </div>
-                  <div className="time">
-                    <RxClock id="Clock" />
-                    <p>เวลาเฉลี่ย 2 ชม.</p>
-                  </div>
-                  <img src={require("../img/mountain2.jpg")} alt="" />
-                </Link>
-              </Ripples>
-
+              </div> */}
             </div>
 
-            <>
-              {cards.length > 0 && (
-                <>
-                  {cards.map((cards) => (
-                    <>
-                      {/* <Ripples>
+            {/*  พื้นที่แสดง cards */}
+            <div className="container_showitem">
+              <>
+                {posts.length > 0 && (
+                  <>
+                    {posts.map((cards) => (
+                      <>
+                        {/* <Ripples>
                           <button className="Treak_card ">
                             <div className="textitem">
                               <h3 key={cards.id}>{cards.title}</h3>
@@ -235,40 +239,37 @@ function Trekking() {
                           </button>
                         </Ripples> */}
 
-                      <Ripples>
-                        <Link to='/ShowDetails' className="Treak_card" >
-                          <div className="textitem">
-                            <h3 key={cards.id}>{cards.title}</h3>
-                            <div className="walk">
-                              <FaWalking id='walkicon' />
-                              <p>ระยะทาง 5.5 กิโลเมตร</p>
+                        <Ripples>
+                          <Link to='/ShowDetails' className="Treak_card" >
+                            <div className="textitem">
+                              <h3 key={cards.id}>{cards.title}</h3>
+                              <div className="walk">
+                                <FaWalking id='walkicon' />
+                                {/* <p>{cards.id}</p> */}
+                              </div>
+                              <div className="time">
+                                <RxClock id='Clock' />
+                                {/* <p>{cards.title}</p> */}
+                              </div>
                             </div>
-                            <div className="time">
-                              <RxClock id='Clock' />
-                              <p>เวลาเฉลี่ย 2 ชม.</p>
-                            </div>
-                          </div>
-                          <img
-                            key={cards.id}
-                            src={cards.cover_image}
-                            className="img_item zoom"
-                          />
-                        </Link>
-                      </Ripples>
+                            <img
+                              key={cards.id}
+                              src={cards.cover_image}
+                              className="img_item zoom"
+                            />
+                          </Link>
+                        </Ripples>
 
-                    </>
-                  ))}
-                </>
-              )}
-            </>
+                      </>
+                    ))}
+                  </>
+                )}
+              </>
+            </div>
           </div>
         </div>
       </div>
-
-
-
-
-      <Footer />
+      
     </>
   );
 }
