@@ -29,16 +29,16 @@
 
 
 .containershowcard {
-    height: 140vh;
+    height: auto;
     max-width: 1536px;
     padding: 0 1.5rem;
-    margin-bottom: calc(20% + 50px);
+    margin-bottom: calc(5%);
     background-color: #ffffff;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
 }
 
 .boxPath {
@@ -48,24 +48,7 @@
     /* border: 1px rgb(230, 0, 0) solid; */
 }
 
-.displaymap {
-    height: 40%;
-    width: 80%;
-    margin: 2% auto;
-    /* border: red 1px solid; */
-}
 
-.container_detils {
-    height: 50%;
-    width: 80%;
-    margin: 0 auto;
-    padding: 1.5rem;
-    display: inline-flex;
-    border: 1px rgb(40, 19, 19) solid;
-    justify-content: space-between;
-
-
-}
 
 .nameplace {
     font-size: 2.2rem;
@@ -73,13 +56,7 @@
     font-family: 'Kanit', sans-serif;
 }
 
-.title {
-    height: 5rem;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    /* justify-content: space-between; */
-}
+
 
 /* style btn level  */
 
@@ -126,18 +103,6 @@
 
 }
 
-.locationBox {
-    display: inline-flex;
-    align-items: center;
-    height: 10%;
-    width: 100%;
-    /* border: red 1px solid; */
-
-}
-
-.locationBox p {
-    font-size: 16px;
-}
 
 .pinicon {
     font-size: 25px;
@@ -147,21 +112,6 @@
 
 }
 
-.StarshowDetails {
-    height: 2rem;
-    width: auto;
-    margin-left: 5%;
-
-    /* border: red 1px solid; */
-}
-
-.iconBoxshowdetils {
-    height: 10%;
-    width: 100%;
-    margin-top: 1%;
-}
-
-
 .average_walk, .average_time {
     height: 2rem;
     width: 38%;
@@ -170,16 +120,6 @@
     align-content: center;
 }
 
-.average_walk p, .average_time p {
-    width: auto;
-    font-size: 16px;
-    font-weight: 200;
-    text-align: left;
-    color: rgb(0, 0, 0);
-    margin-bottom: 1rem;
-    letter-spacing: 1px;
-    font-family: 'Kanit', sans-serif;
-}
 
 #average_walkicon, #average_timewalk {
     font-size: 1.5rem;
@@ -188,30 +128,6 @@
     margin-bottom: 1rem;
 }
 
-
-.data_place {
-    height: max-content;
-    width: 100%;
-    letter-spacing: 1px;
-}
-
-
-.dataleft {
-    height: 50vh;
-    width: 50%;
-
-    border: 1px red solid;
-
-}
-
-.dataright {
-    height: 50vh;
-    width: 40%;
-
-    /* border: 1px rgb(0, 0, 0) solid; */
-    padding: 1.5rem;
-
-}
 
 .details p {
     font-size: 16px;
@@ -233,14 +149,5 @@
 
 
 
-@media (min-width: 1536px) {
-    .containershowcard {
-        max-width: 1536px;
-        margin-top: 2%;
-        margin-right: auto;
-        margin-left: auto;
 
 
-    }
-
-}

@@ -84,7 +84,7 @@ const Home = () => {
           </div>
         </div>
         <div className="bt2">
-          <Link to="/Trekking"><button>View All</button></Link>
+          <Link onClick={() => {window.location.href="/Trekking"}}><button>View All</button></Link>
         </div>
       </div>
 

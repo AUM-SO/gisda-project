@@ -47,10 +47,10 @@ const Footer = () => {
             <div class="footer-col">
               <h4>Pages</h4>
               <ul>
-                <li><Link to='/'>Home</Link ></li>
-                <li><Link to='/Trekking'>Trekking</Link ></li>
-                <li><Link to='/Blog'>Blog</Link ></li>
-                <li><Link to='/About'>About</Link ></li>
+                <li><Link onClick={() => {window.location.href="/"}}>Home</Link ></li>
+                <li><Link onClick={() => {window.location.href="/Trekking"}}>Trekking</Link ></li>
+                <li><Link onClick={() => {window.location.href="/Blog"}}>Blog</Link ></li>
+                <li><Link onClick={() => {window.location.href="/About"}}>About</Link ></li>
               </ul>
             </div>
             <div class="footer-col">

@@ -34,7 +34,7 @@ li {
 .brand {
     height: 3rem;
     width: 200px;
-    margin-left: 10vh;
+    margin-left: 10%;
 
     display: inline-flex;
     justify-content: center;
@@ -79,7 +79,7 @@ li {
     height: 4px;
     border-radius: 3px;
     background-color: black;
-    transition: width 0.9s ease-in-out;
+    transition: width 0.6s ease-in-out;
 }
 
 .underline-link:hover::before {
@@ -156,6 +156,8 @@ li {
         display: none;
     }
 
+    
+
     .container {
         position: absolute;
         top: 0;
@@ -165,10 +167,10 @@ li {
         z-index: 1;
     }
 
-    .nav-Link, .btnstyle{
+    .nav-Link, .btnstyle {
         display: none;
     }
-    
+
     .btnHumburger {
         height: 50px;
         width: 50px;
@@ -189,23 +191,26 @@ li {
     .backpop {
         display: flex;
         flex-direction: column;
-        height: 100rem;
+        height: 100vh;
         width: 50%;
         background-color: rgba(255, 255, 255, 0.31);
         position: absolute;
         right: 0;
+        justify-content: center;
     }
 
     .manu-nav {
         padding: 10px;
     }
+
     .list-group popupBurger {
         background-color: red;
     }
+
     .popupBurger {
         height: 50px;
         width: 10%;
-        
+
         /*background-color: rgba(255, 255, 255, 0.324);
         box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
         margin: 0px;
@@ -225,7 +230,7 @@ li {
     .moblie-manu {
         top: 0;
         position: fixed;
-        
+
         max-height: 53rem;
         justify-content: center;
         align-items: center;
