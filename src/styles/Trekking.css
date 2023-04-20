@@ -11,12 +11,13 @@
 }
 
 .boxPart {
+    margin-top: 3%;
     margin-bottom: 1%;
     /* border: 1px solid; */
 }
 
 .container_trekking {
-    height: 100vh;
+    height: max-content;
     width: 100%;
 
     display: flex;
@@ -25,12 +26,14 @@
 }
 
 
-.filter_container {
-    height: 90%;
+.filter_container, .stylefilter {
+    height: 90vh;
     width: 30%;
-    padding-top: 2rem;
+    border-radius: 10px;
+    padding-top: 7%;
     padding-left: 3.5rem;
-    background-color: whitesmoke;
+    
+    background-color: white;
 }
 
 .style_textfilter {
@@ -42,10 +45,7 @@
 .style_labelfilter {
     font-size: 16px;
     cursor: pointer;
-    
 }
-
-
 
 .container_item {
     height: max-content;
@@ -65,6 +65,39 @@
     margin-bottom: 1%;
 }
 
+
+
+.btnfilter {
+    height: 3rem;
+    width: 3rem;
+    text-align: center;
+    display: none;
+    font-size: 20px;
+    border-radius: 10px;
+    
+}
+
+.btnfilterclose {
+    height: 3rem;
+    width: 3rem;
+    text-align: center;
+    display: none;
+    font-size: 20px;
+    border-radius: 10px;
+    
+}
+    
+
+
+
+
+.btnfilter:hover {
+    transform: 0.5s ease-in;
+    background-color: rgb(250, 252, 255);
+    
+}
+
+
 .dropdown {
     display: inline-flex;
     align-items: center;
@@ -81,11 +114,15 @@
 
 .container_showitem {
     height: 100%;
-    width: auto;
-    display: inline-flex;
+    width: 100%;
+
+    display: inline-block;
+    
+    
+    /* display: inline-flex;
     flex-wrap: wrap;
     flex-direction: row;
-    align-content: flex-start;
+    align-content: flex-start; */
     /* background-color: rgb(9, 226, 67); */
     
 }
@@ -128,7 +165,7 @@
     bottom: 20%;
     flex-direction: column;
     align-items: start;
-    z-index: 999;
+    z-index: 3;
 }
 
 .textitem h3 {
@@ -163,32 +200,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (min-width: 1536px) {
     .Trekking {
         max-width: 1536px;
@@ -196,4 +207,63 @@
         margin-left: auto;
     }
 
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    
+    .stylefilter {
+        height: 100%;
+        width: 60%;
+        position: absolute;
+        z-index: 8;
+        left: 0;
+        top: 0;
+        padding-left:4%;
+        margin-bottom: 10%;
+    }
+    
+    .filter_container {
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 30%;
+        z-index: 5;
+
+    }
+
+    .container_Location {
+        margin-top: 40%;
+    }
+ 
+    .container_showitem {
+        text-align: center;
+
+    }
+
+    .btnfilterclose{
+        display: block;
+        margin-left: 65%;
+        text-align: center;
+        background-color: white;
+
+
+    }
+
+    .btnfilter {
+        display: flex;
+        background-color: white;
+    }
+    
+}
+@media screen and (max-width: 768px ) {
+
+    .filter_container {
+        display: none;
+    }
+    
+    .container_item {
+        padding: 1.5rem 0;
+    }
 }

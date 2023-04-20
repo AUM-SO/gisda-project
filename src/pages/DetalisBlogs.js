@@ -17,7 +17,6 @@ function DetalisBlogs() {
                 <div className="Detalis_AreaBlogs">
                     <div className="contentBlog">
                         {/* <h1>Title Blog</h1> */}
-
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus repellendus, nisi doloremque dolor voluptas quasi, unde impedit eaque eos saepe maiores veniam, sint dolorum voluptate quia? Harum adipisci aspernatur nisi!
                             Molestias ab asperiores eligendi itaque veniam natus odio perferendis magni quidem similique. Enim quibusdam at culpa corporis dolor delectus quis odio quisquam consectetur tempora atque non, itaque ratione quidem commodi.
                             Aut dolores similique molestiae voluptatem! Totam nulla nisi at eos, praesentium perferendis labore ipsa doloremque itaque a aperiam molestias, quo laudantium consequuntur corporis iusto fugit sint error optio autem cupiditate?

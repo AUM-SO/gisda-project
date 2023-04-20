@@ -33,18 +33,20 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 
 }
 
 .titleimgBlog {
     max-height: 30rem;
-    width: 100%;
+    width: 90%;
     border-radius: 7px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 5% 0;
     overflow: hidden;
+    z-index: 0;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 
@@ -52,7 +54,7 @@
 
 .titleimgBlog h1 {
     color: white;
-    font-size: 6rem;
+    font-size: 6vw;
     z-index: 99;
     position: absolute;
 }
@@ -72,7 +74,7 @@
 
 .Detalis_AreaBlogs {
     height: max-content;
-    width: 1536px;
+    /* width: 1536px; */
     display: inline-flex;
     justify-content: center;
     align-items: center;

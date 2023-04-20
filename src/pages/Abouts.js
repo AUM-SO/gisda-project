@@ -19,8 +19,8 @@ function Abouts() {
   return (
 
     <>
-    
-    <ScrollToTopButton/>
+
+      <ScrollToTopButton />
       <div className="container_About">
         <div className="container_title">
           <div className="texttitle_About ">
@@ -58,7 +58,8 @@ function Abouts() {
                     <Link to='' className='NameDev'>Apirak Phutnium</Link>
                     <p>Web design & Font End </p>
                     <Link to='' target='_blank' className='icon_cardTeam'>
-                      <SiGmail id='iconCardteam' /><p className='NameDev'>Aum0834@gmail.com</p> </Link>
+                      <SiGmail id='iconCardteam' /><p className='NameDev'>Aum0834@gmail.com</p>
+                    </Link>
                   </div>
                 </Ripples>
                 <Ripples className="cardteam zoom ">
@@ -67,7 +68,8 @@ function Abouts() {
                     <Link to='' className='NameDev' >Panupong Mapa</Link>
                     <p>Back End Developer</p>
                     <Link to='' target='_blank' className='icon_cardTeam'>
-                      <SiGmail id='iconCardteam' /><p className='NameDev'>panupong.map@psru.ac.th</p></Link>
+                      <SiGmail id='iconCardteam' /><p className='NameDev'>panupong.map@psru.ac.th</p>
+                    </Link>
                   </div>
                 </Ripples>
                 <Ripples className="cardteam zoom">
@@ -76,7 +78,8 @@ function Abouts() {
                     <Link to='' className='NameDev' >Metichai Bunyungrod</Link>
                     <p>Web design & Font End</p>
                     <Link to='' target='_blank' className='icon_cardTeam'>
-                      <SiGmail id='iconCardteam' /><p className='NameDev'>Blvckroninx@gmail.com</p></Link>
+                      <SiGmail id='iconCardteam' /><p className='NameDev'>Blvckroninx@gmail.com</p>
+                    </Link>
                   </div>
                 </Ripples>
               </div>

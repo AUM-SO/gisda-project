@@ -70,10 +70,9 @@ function Navbar() {
 
     const handleClick = () => {
         setToggle(!toggle)
-        
     };
 
-
+    
 
     return (
         <BrowserRouter>
@@ -101,17 +100,15 @@ function Navbar() {
                         <GiHamburgerMenu className='iconBurger' /><HiX className='iconclose' />
                     </button>
 
-                    <ul class="list-group popupBurger" style={{ display: toggle ? 'none' : 'block' }}>
+                    <ul class=" popupBurger" style={{ display: toggle ? 'none' : 'block' }}>
                         <div className="backpop">
                             <NavLink to='/' className='manu-nav underline-link'><li>Home</li></NavLink>
-                            <NavLink to='/Trekking' className='manu-nav underline-link'><li >Trekking</li></NavLink>
+                            <NavLink to='/Trekking ' /* onClick={() => {window.location.href="/Trekking"}} */ className='manu-nav underline-link'><li >Trekking</li></NavLink>
                             <NavLink to='/Blog' className='manu-nav underline-link'><li>Blog</li></NavLink>
                             <NavLink to='/About' className='manu-nav underline-link'><li>About</li></NavLink>
                             <NavLink to='/Login' className='manu-nav notshow '><li>Login</li></NavLink>
                             <NavLink to='/Signup' className='manu-nav notshow '><li>Signup</li></NavLink>
                         </div>
-
-
                         <button className="btnclose"></button>
                     </ul>
 
