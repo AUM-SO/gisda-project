@@ -7,9 +7,9 @@ function DetalisBlogs() {
     return (
         <>
             <div className="containerBlogDetalis">
-                <div className="boxPath">
+                {/* <div className="boxPath">
                     <p>insert Function Path Here !!!!</p>
-                </div>
+                </div> */}
                 <div className="titleimgBlog ">
                     <h1 className='TitleH1'>Trakking คืออะไร ? </h1>
                     <img src={require("../img/Blog/Blogtitle5.jpg")} alt="" className='titleimg zoom' />

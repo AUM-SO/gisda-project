@@ -26,9 +26,8 @@ import Ripples from 'react-ripples'
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-/* Function ScrollToTopButton */
 
-
+import videoFile from '../img/Home/Header.mp4';
 
 
 const Home = () => {
@@ -37,8 +36,8 @@ const Home = () => {
 
   const fetchCardsData = () => {
     axios.get("https://trekking.gistda.or.th/api/posts").then((data) => {
-        setPost(data.data.results.slice(0,3));
-      });
+      setPost(data.data.results.slice(0, 3));
+    });
   };
 
   useEffect(() => {
@@ -47,19 +46,20 @@ const Home = () => {
 
 
 
- 
+
 
 
   return (
     <>
       <div class="header ">
-        <img src={require('../img/header.jpg')} alt="" className="imghaeder" />
+        {/* <img src={require('../img/header.jpg')} alt="" className="imghaeder" /> */}
+        <video src={videoFile} width="auto" height="auto" className="imghaeder" muted loop playsInline autoPlay ></video>
         <div className="container_header">
           <h1 className="animate__fadeInDown animate__animated animate__delay-0.7s">Trekking in EEC</h1>
           <p className="animate__fadeInDown animate__animated animate__delay-0.8s">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Voluptatem est sit illo! Repudiandae, libero quidem. Omnis laborum quod, tenetur rerum,
-            harum nisi dolor deserunt perferendis quaerat nostrum quia, aspernatur odit!
+            แหล่งรวมข้อมูลการเดินป่าสำหรับมือใหม่หรือผู้มีประสบการณ์ เพื่อส่งเสริมให้ทุกท่านที่สนใจการเดินป่าหันมาใช้เวลาว่างในการทำกิจกรรม
+            พร้อมทั้งชมความสวยงามของธรรมชาติ
+
           </p>
 
           <div className="btn_titlse animate__fadeInDown animate__animated animate__delay-1s">
@@ -75,8 +75,9 @@ const Home = () => {
           <div className="textbox_comtent1">
             <h1>Favorite Trekking</h1>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam
-              suscipit impedit repellat aliquam unde.
+              สถานที่ที่คุณควรลอง
+              คัดสรรมาเพื่อเปิดรับประสบกรณ์ใหม่ๆในการเดินป่า
+              กระโดดออกจากเซฟโซนที่ทุกคนเคยอยู่
             </p>
 
             <div>
@@ -84,7 +85,7 @@ const Home = () => {
           </div>
         </div>
         <div className="bt2">
-          <Link onClick={() => {window.location.href="/Trekking"}}><button>View All</button></Link>
+          <Link onClick={() => { window.location.href = "/Trekking" }}><button>View All</button></Link>
         </div>
       </div>
 
@@ -179,7 +180,11 @@ const Home = () => {
       <div className="content3">
         <div className="textbox">
           <h1>service for you</h1>
-          <p>Thailand Mountain Trail has created TMT.1, the longest hiking footpath of Thailand. The route links Chiang Mai city to the biggest mountain range of the country, Chiang Dao. Through wild jungle, stunning rice paddies and beautiful summits.</p>
+          <p>
+          นำเสนอฟิลเจอร์ที่หน้าสนใจต่างๆที่พร้อมให้บริการ
+กับนักเดินป่าทุกท่านเพื่ออำนวจความสะดวกในด้านต่างๆ 
+ไม่ว่าจะเป็น จุดปั้มน้ำมัน จุดมาร์ค ที่จอดรถ ที่พัก แสดงภาพแผนที่สองมิติ และอาจมีเพิ่มเติมในอนาคต
+          </p>
           <button className="btn_moredetiles zoom">Explore More</button>
         </div>
         <div className="container_icon">
@@ -210,8 +215,9 @@ const Home = () => {
           <iframe width="100%" height="100%" src="https://www.youtube.com/embed/7671sL_9tp0" title="GISTDA แนะนำองค์กร 2021" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <div className="textcon4">
-          <h1>Trekking for you</h1>
-          <p>Thailand Mountain Trail has created TMT.1, the longest hiking footpath of Thailand. The route links Chiang Mai city to the biggest mountain range of the country, Chiang Dao. Through wild jungle, stunning rice paddies and beautiful summits, TMT.1 goes through remote hill-tribe areas such as the Karen valleys or the Lahu and Hmong high countries. This is alongside this route we organize our trekking, running and cycling trips.</p>
+          <h1>Gistda </h1>
+          <p>ประเทศไทยได้เข้าร่วมโครงการ NASA ERTS-1 ซึ่งเป็นดาวเทียมสำรวจทรัพยากรดวงแรกของโลก เมื่อวันที่ 14 กันยายน 2514 ภายใต้การดำเนินงานของ โครงการสำรวจทรัพยากรธรรมชาติดาวเทียม สำนักงานคณะกรรมการวิจัยแห่งชาติ โดย ทำหน้าที่ ประสานงาน จัดหาข้อมูลดาวเทียม ดำเนินการวิเคราะห์ข้อมูล ถ่ายทอดเทคโนโลยี 
+             ตลอดจนจัดหาทุนฝึกอบรม ดูงาน และการประชุม ทั้งระดับประเทศและนานาชาติ ด้วยผลสำเร็จของโครงการ จึงได้มีการเปลี่ยนสถานภาพโครงการฯ เป็นหน่วยงานระดับกองชื่อ กองสำรวจทรัพยากรธรรมชาติด้วยดาวเทียม ใน พ.ศ. 2522 และใน พ.ศ. 2525 ได้ดำเนินการจัดตั้งสถานีรับสัญญาณดาวเทียมขึ้นที่ เขตลาดกระบัง กรุงเทพมหานคร นับเป็นสถานีรับแห่งแรกในภูมิภาคเอเชียตะวันออกเฉียงใต้</p>
           <button className="btn_moredetiles zoom">Explore More</button>
         </div>
       </div>

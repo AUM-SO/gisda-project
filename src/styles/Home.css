@@ -40,6 +40,7 @@ p {
     width: 100%;
     position: absolute;
     z-index: -1;
+    object-fit: cover;
 }
 
 .header h1 {
@@ -63,6 +64,8 @@ p {
     color: white;
     margin-left: auto;
     margin-right: auto;
+    font-family: 'Kanit', sans-serif;
+
 }
 
 .container_header {
@@ -84,7 +87,14 @@ p {
 
 }
 
-
+.video-background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
 .rowheader {
     height: 11vh;
@@ -93,7 +103,9 @@ p {
 }
 
 
-
+.textbox_comtent1 p {
+    font-family: 'Kanit', sans-serif;
+}
 
 .btn_titlse {
     height: auto;
@@ -314,10 +326,12 @@ p {
     width: 30%;
     /* margin-top: 2%; */
     margin-left: 15%;
+    font-family: 'Kanit', sans-serif;
 
 }
 
-.textbox p {
+.textbox p, .textcon4 p {
+    font-family: 'Kanit', sans-serif;
     color: black;
 }
 

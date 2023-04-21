@@ -7,26 +7,21 @@ function DetalisBlogs() {
     return (
         <>
             <div className="containerBlogDetalis">
-                <div className="boxPath">
+                {/* <div className="boxPath">
                     <p>insert Function Path Here !!!!</p>
-                </div>
+                </div> */}
                 <div className="titleimgBlog ">
-                    <h1 className='TitleH1'>Trakking คืออะไร ? </h1>
+                    <h1 className='TitleH1'>Trekking คืออะไร ? </h1>
                     <img src={require("../img/Blog/Blogtitle2.jpg")} alt="" className='titleimg zoom' />
                 </div>
                 <div className="Detalis_AreaBlogs">
                     <div className="contentBlog">
-                        {/* <h1>Title Blog</h1> */}
-
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus repellendus, nisi doloremque dolor voluptas quasi, unde impedit eaque eos saepe maiores veniam, sint dolorum voluptate quia? Harum adipisci aspernatur nisi!
-                            Molestias ab asperiores eligendi itaque veniam natus odio perferendis magni quidem similique. Enim quibusdam at culpa corporis dolor delectus quis odio quisquam consectetur tempora atque non, itaque ratione quidem commodi.
-                            Aut dolores similique molestiae voluptatem! Totam nulla nisi at eos, praesentium perferendis labore ipsa doloremque itaque a aperiam molestias, quo laudantium consequuntur corporis iusto fugit sint error optio autem cupiditate?
-                            Et dignissimos iusto sint incidunt velit quibusdam cupiditate a distinctio, necessitatibus temporibus quod, eveniet dolorem harum aliquam accusantium? Odit culpa provident deleniti et! Earum neque nam laudantium beatae provident ullam!
-                            Necessitatibus hic quasi incidunt sunt. Velit aliquam eum soluta distinctio modi, non dolorem, ad illo cupiditate perspiciatis optio libero. Ullam perferendis qui sunt dicta excepturi mollitia a modi unde illo.
-                            Beatae expedita aut incidunt amet labore eveniet praesentium a nesciunt dolore, facere facilis repellat ipsa tempora culpa nulla quia, ipsum quidem esse! Natus consequatur dignissimos eius unde repellendus, inventore quibusdam.
-                            Veniam nemo dignissimos perferendis reiciendis voluptatum, inventore assumenda! Ducimus saepe ab repudiandae numquam, asperiores tempore eaque? Maxime quis impedit ipsa veritatis et mollitia, repudiandae vel, nisi, ratione consectetur quaerat unde?
-                            Corrupti autem facilis sint in esse quos, libero eum culpa qui maxime ullam itaque optio ipsa accusamus alias impedit doloremque ea omnis placeat quia quae! Blanditiis quidem porro beatae dignissimos?
-                            Architecto tenetur distinctio fuga, numquam placeat nesciunt ut? Vero nemo tempora possimus facilis ipsam architecto velit nesciunt dolores ipsum, blanditiis sit exercitationem laudantium excepturi obcaecati facere repellendus. Rem, magnam earum.</p>
+                        
+                        <p>ระยะนี้กิจกรรมเดินป่า ผจญภัยแนวแอดเวนเจอร์ได้รับความนิยมมากขึ้นในหมู่นักเดินทางคนรุ่นใหม่ที่เริ่มเบื่อห้าง และมองหาประสบการณ์การเดินทางที่มากกว่าการไปดูนู่นนี่นั่นแล้วกลับ ไล่มาตั้งแต่เซิร์ฟ, SUP Board ไปจนถึงการแคมปิ้งและเดินเทรล ยิ่งข้อสุดท้าย เวลาเสิร์ชหาข้อมูลเดินป่า บางคนก็เรียกกิจกรรมนี้ว่า Hiking บางคนก็เรียก Trekking ชวนให้สับสนมึนงงไปหมด จนหลายคนคิดว่ามันใช้แทนกันและเหมือนกัน อันที่จริงแล้ว Hiking กับ Trekking ไม่ใช่คำที่มีความหมายเหมือนกันเสียทีเดียว แต่จะแตกต่างอย่างไรนั้น นี่คือคำตอบ</p>
+                        <h3>นิยามความหมายของ Hiking และ Trekking</h3>
+                        <p>พจนานุกรมภาษาอังกฤษ Oxford ได้ให้คำจำกัดความของทั้ง 2 คำนี้ว่า ‘Hiking’ หมายถึง กิจกรรมการเดินป่าระยะไกลในประเทศเพื่อความเพลิดเพลิน ขณะที่ ‘Trekking’ หมายถึง การเดินทางไกลหรือยากลำบากด้วยการเดินเท้า ซึ่งเมื่อนำความหมายมาพิจารณาจะเห็นว่า ทั้งสองคำนั้นมีความคล้ายคลึงกันในแง่ของการเดิน แต่แตกต่างกันในเรื่องของระยะทางและความสมบุกสมบัน
+                            โดยทั่วไป Hiking หมายถึงการเดินป่าเพื่อความเพลิดเพลินตามเส้นทางที่ถูกกำหนดไว้โดยเจ้าหน้าที่หรือนักสำรวจคนก่อนๆ อาจใช้เวลาทำกิจกรรมตั้งแต่ครึ่งวันไปจนถึงค้างคืน เส้นทางเดินง่าย ไม่สมบุกสมบัน และส่วนใหญ่มีไว้เพื่อศึกษาธรรมชาติ
+                            ส่วน Trekking หมายถึง การเดินป่าระยะไกลที่กินระยะเวลายาวนานกว่า Hiking มีทั้งผ่านเส้นทางที่มีคนสำรวจไว้แล้วหรือออกนอกเส้นทางหลัก มีการค้างอ้างแรม จึงจำเป็นต้องมีเต็นท์เพื่อแคมปิ้ง รวมถึงสัมภาระอื่นจำพวกอาหาร ยารักษาโรค ถ้าพูดกันแบบง่ายๆ Trekking ก็คือการเที่ยวป่าเขาลำเนาไพรโดยใช้เท้าสัญจร</p>
                     </div>
                     <p className='underLineBlog'></p>
                 </div>

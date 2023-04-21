@@ -56,7 +56,7 @@ function Abouts() {
                   <img src={require('../img/About_img/aum.png')} alt="" />
                   <div className="team_textcard">
                     <Link to='' className='NameDev'>Apirak Phutnium</Link>
-                    <p>Web design & Font End </p>
+                    <p>Web design & Front End </p>
                     <Link to='' target='_blank' className='icon_cardTeam'>
                       <SiGmail id='iconCardteam' /><p className='NameDev'>Aum0834@gmail.com</p>
                     </Link>
@@ -76,7 +76,7 @@ function Abouts() {
                   <img src={require('../img/About_img/nes.png')} alt="" />
                   <div className="team_textcard">
                     <Link to='' className='NameDev' >Metichai Bunyungrod</Link>
-                    <p>Web design & Font End</p>
+                    <p>Web design & Front End</p>
                     <Link to='' target='_blank' className='icon_cardTeam'>
                       <SiGmail id='iconCardteam' /><p className='NameDev'>Blvckroninx@gmail.com</p>
                     </Link>

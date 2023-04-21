@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/DetalisBlogs.css'
+import '../styles/DetalisBlogs2.css'
 /* import components */
 import Footer from '../components/Footer'
 
@@ -7,9 +7,9 @@ function DetalisBlogs() {
     return (
         <>
             <div className="containerBlogDetalis">
-                <div className="boxPath">
+                {/* <div className="boxPath">
                     <p>insert Function Path Here !!!!</p>
-                </div>
+                </div> */}
                 <div className="titleimgBlog ">
                     <h1 className='TitleH1'>การเตรียมตัวก่อนเริ่มเดินป่า</h1>
                     <img src={require("../img/Blog/Blogtitle4.jpg")} alt="" className='titleimg zoom' />
@@ -17,16 +17,42 @@ function DetalisBlogs() {
                 <div className="Detalis_AreaBlogs">
                     <div className="contentBlog">
                         {/* <h1>Title Blog</h1> */}
+                        <p>เมืองหลวง ควันและฝุ่นมากมายพี่สูดดมเข้าไปร่างกายก็เป็นภูมิแพ้' พี่ป้างสร้างสรรค์บทเพลง ภูมิแพ้กรุงเทพ กระแสตอนนั้นนำเอาคนแห่หนีออกต่างจังหวัดกันหมด
+                            ชีวิตคนเมืองต้องพบเจอความวุ่นวายต่างๆ ทั้งฝุ่นควัน อกหัก รถติด ภาระงาน บ่อยครั้งที่คนเรามองหาความสุขจากการพักหรือหลีกหนีจากความวุ่นวายนี้ เพลง วันหนึ่งฉันเดินเข้าป่า
+                            ของคุณแมกซ์ เจนมานะ ถือเป็นการแสดงออกรูปแบบหนึ่งที่ทำให้การเข้าป่ามีเหตุผลที่น่าสนใจมากขึ้น รวมถึงไม่ต้องมีเหตุผลเลย ป่ะ เราไป เข้าป่า กันการจะ เข้าป่า
+                            แบบไม่รู้อะไรเลยมันก็จะเสี่ยงและอันตรายเกินไป
+                            เหตุการณ์ไม่คาดคิดสามารถเกิดขึ้นได้ตลอดเวลา ฝนตก อาหารไม่พอ น้ำหมด เจอสัตว์อันตราย แข้งขาหักพลัดตกเขา ฯลฯ
+                            เอาล่ะเราจะมาแนะนำการเตรียมตัว สำหรับการคนที่กำลังคิดจะเดินป่า เข้าป่าครั้งแรกหรือมือใหม่ ให้เข้าใจกันอย่างง่ายๆ ดังนี้
+                        </p>
 
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus repellendus, nisi doloremque dolor voluptas quasi, unde impedit eaque eos saepe maiores veniam, sint dolorum voluptate quia? Harum adipisci aspernatur nisi!
-                            Molestias ab asperiores eligendi itaque veniam natus odio perferendis magni quidem similique. Enim quibusdam at culpa corporis dolor delectus quis odio quisquam consectetur tempora atque non, itaque ratione quidem commodi.
-                            Aut dolores similique molestiae voluptatem! Totam nulla nisi at eos, praesentium perferendis labore ipsa doloremque itaque a aperiam molestias, quo laudantium consequuntur corporis iusto fugit sint error optio autem cupiditate?
-                            Et dignissimos iusto sint incidunt velit quibusdam cupiditate a distinctio, necessitatibus temporibus quod, eveniet dolorem harum aliquam accusantium? Odit culpa provident deleniti et! Earum neque nam laudantium beatae provident ullam!
-                            Necessitatibus hic quasi incidunt sunt. Velit aliquam eum soluta distinctio modi, non dolorem, ad illo cupiditate perspiciatis optio libero. Ullam perferendis qui sunt dicta excepturi mollitia a modi unde illo.
-                            Beatae expedita aut incidunt amet labore eveniet praesentium a nesciunt dolore, facere facilis repellat ipsa tempora culpa nulla quia, ipsum quidem esse! Natus consequatur dignissimos eius unde repellendus, inventore quibusdam.
-                            Veniam nemo dignissimos perferendis reiciendis voluptatum, inventore assumenda! Ducimus saepe ab repudiandae numquam, asperiores tempore eaque? Maxime quis impedit ipsa veritatis et mollitia, repudiandae vel, nisi, ratione consectetur quaerat unde?
-                            Corrupti autem facilis sint in esse quos, libero eum culpa qui maxime ullam itaque optio ipsa accusamus alias impedit doloremque ea omnis placeat quia quae! Blanditiis quidem porro beatae dignissimos?
-                            Architecto tenetur distinctio fuga, numquam placeat nesciunt ut? Vero nemo tempora possimus facilis ipsam architecto velit nesciunt dolores ipsum, blanditiis sit exercitationem laudantium excepturi obcaecati facere repellendus. Rem, magnam earum.</p>
+                        <div className='contentblog2'>
+                            <h3>1. รู้เขา</h3>
+                            <ul className='Blogcontent'>
+                                <li>รู้จักสถานที่ที่เราจะไปทั้งการเดินทาง (ต้องใช้รถแบบไหน เดินทางกี่ต่อ)</li>
+                                <li>สภาพภูมิประเทศ (ภูเขาหญ้า ป่าสน ป่าดิบชื้น น้ำตก หน้าผา)</li>
+                                <li>ช่วงฤดูที่เดินทาง (ฤดูร้อน ฝน หนาว)</li>
+                                <li>ระยะทางที่ต้องเดิน (กี่วัน กี่กิโล)</li>
+                                <li>รูปแบบการเดินทาง (ทางราบ ทางราบสลับชัน ทางชัน)</li>
+                                <li>ความชัน (ชันมากชันน้อย)</li>
+                                <li>สัตว์หรือแมลงที่เป็นอันตราย (ยุง ทาก คุ้น หมี ช้าง)</li>
+                            </ul>
+                            <h3>2. รู้ตัวเอง</h3>
+                            <p >รู้จักสภาพตัวเองว่าไหวแค่ไหน ก่อนการเดินป่าอย่างน้อยควรมีการวอร์มอัพร่างกายและกล้ามเนื้อโดยเฉพาะช่วงขา
+                                น่อง สะโพก และหลัง โดยการวิ่ง ลุกนั่ง หรือกระโดดตบ เป็นต้น ไม่สนุกเลยหากเดินอยู่แล้วตะคริวขึ้น
+                                ส่วนเรื่องการเดินไม่จำเป็นต้องรีบร้อนเดิน เดินตามจังหวะของตัวเอง เหนื่อยก็พัก แต่ไม่ควรพักนานจนเกินไป
+                                อาจใช้เวลาเข้ามาช่วยในการเดิน เช่น เดิน 45 นาทีพัก 5-10 นาที เดินต่ออีก 45 นาที เป็นต้น
+                            </p>
+                            <h3>3. เตรียมอุปกรณ์</h3>
+                            <p>โดยพิจารณาจากสภาพที่เราจะไปเจอจากข้อแรกว่าควรจะเอาอะไรไปบ้าง ถ้าให้เลือกสิ่งที่มีความสำคัญ 6 อันดับ ที่สายเดินป่าควรมี ดังนี้</p>
+                            <ul className='Blogcontent2'>
+                                <li><strong>เต็นท์ / เปลมุ้ง </strong>ข้อนี้ถือว่าเป็นหนึ่งในอุปกรณ์ที่สำคัญที่สุด รองมาจากอาหาร คงไม่มีใครแบกทั้งเปลและเต็นท์ไป นึกถึงบริเวณที่นอนว่าสภาพเป็นอย่างไร ถ้านึกไม่ออก ลองคิดว่าถ้าเราเอาเปลไปแต่บริเวณที่เราจะนอนไม่มีต้นไม้เลย แล้วเราจะผูกเปลอย่างไร?</li>
+                                <li><strong>เต็นท์ (Tent)</strong> เหมาะสำหรับกรณีที่พื้นที่เพียงพอ โดยพิจารณา จากวัสดุ ความกันน้ำ น้ำหนัก จำนวนคน วิธีกาง อีกทั้งยังให้ความเป็นส่วนตัวมากกกว่าเปล แต่ก็มีข้อจำกัดเรื่องพื้นที่จัดเก็บ </li>
+                                <li><strong>เปล (Hammock)</strong>&nbsp;เหมาะสำหรับใช้ในพื้นที่ที่มีความจำกัด น้ำหนักเบา ประหยัดพื้นที่ (บางยี่ห้อก็ใหญ่กว่าถุงแกงนิดเดียวเองนะ) และจำเป็นจะต้องดูทิศทางลม รวมถึงระยะระหว่างต้นไม้ในการผูกเปล</li>
+                                <li><strong>Tips!!! การเลือกทำเลในการกางเต็นท์</strong> ไม่ควรเลือกพื้นที่บริเวณยอดเขาหรือพื้นที่โล่งๆ(ลมแรง นอนระแวง เต็นท์ปลิวได้), แหล่งน้ำมากเกินไป(น้ำป่า), ต้นไม้ที่สภาพดูไม่แข็งแรง(กิ่งไม้หัก) แนะนำมือใหม่ให้เริ่มต้นกับเต็นท์มากกว่าเปล</li>
+                                <li><strong>กระเป๋าแบคแพค Backpack </strong>ย้ำกว่าต้องเป็นกระเป๋าBackpack หรือออกแบบมาเพื่อการแบกจริงๆเท่านั้น เพราะว่าหากใช้กระเป๋าที่ไม่ได้ออกแบบมาเพื่อใช้งานนั้นจะทำให้เราบาดเจ็บได้ หากอุปกรณ์เดินป่าเปรียบเป็นรถคันนึง เต็นท์หรือเปลคือตัวรถ กระเป๋าก็เปรียบเสมือนเบาะรองนั่งที่จะรองรับสรีระคนที่เดินทางให้สบาย ไม่เมื่อยขณะใช้งาน ตามเพศ ระบบหลังตาข่าย หรือฟองน้ำแตกต่างกันไป </li>
+                            </ul>
+                            
+                        </div>
                     </div>
                     <p className='underLineBlog'></p>
                 </div>

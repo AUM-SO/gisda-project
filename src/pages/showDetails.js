@@ -139,7 +139,7 @@ function ShowDetails() {
               </div>
 
             </div>
-            <form action="" className='formcomment'onChange={handleCommentSubmit}>
+            <form action="" className='formcomment'/* onChange={handleCommentSubmit} */>
               <input type="text" name="" id="" className='commentinput' placeholder='แสดงความคิด' />
               <button type='submit' className=" stylebtn_comment" id='' name=''>comment</button>
             </form>
