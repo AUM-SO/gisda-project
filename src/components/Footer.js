@@ -3,15 +3,9 @@ import React from 'react'
 import '../styles/footerstyle.css'
 
 import { Link } from 'react-router-dom'
-import { BsFacebook } from "react-icons/bs"
+import { BsFacebook, BsYoutube, BsInstagram } from "react-icons/bs"
 
-/* import Page for footer manu */
-import Home from "../pages/Home"
-import Trekking from "../pages/Trekking"
-import Blog from "../components/Blog"
-import About from "../pages/Abouts"
-import Login from "../components/Login"
-import Signup from "../components/Signup"
+
 
 const Footer = () => {
   return (
@@ -68,6 +62,8 @@ const Footer = () => {
               <h4>follow us</h4>
               <div class="social-links">
                 <Link to='https://www.facebook.com/gistda' target='_blank'><BsFacebook class='iconLinkFooter'/></Link >
+                <Link to='https://www.youtube.com/@GISTDAspace' target='_blank'><BsYoutube class='iconLinkFooter'/></Link >
+                <Link to='https://www.instagram.com/gistda_space/' target='_blank'><BsInstagram class='iconLinkFooter'/></Link >
               </div>
             </div>
           </div>
