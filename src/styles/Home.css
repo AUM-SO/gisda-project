@@ -201,7 +201,7 @@ p {
 }
 
 .imgincard {
-    height: 45%;
+    max-height: 15rem;
     width: 100%;
     display: flex;
 
@@ -597,7 +597,7 @@ p {
 
 
     .imgincard {
-        height: 45%;
+        height:max-content;
         width: 100%;
     }
 
