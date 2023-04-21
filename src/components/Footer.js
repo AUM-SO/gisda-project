@@ -68,15 +68,11 @@ const Footer = () => {
               <h4>follow us</h4>
               <div class="social-links">
                 <Link to='https://www.facebook.com/gistda' target='_blank'><BsFacebook class='iconLinkFooter'/></Link >
-                <Link to=''><BsFacebook class='iconLinkFooter' target='_blank'/></Link >
-                <Link to=''><BsFacebook class='iconLinkFooter' target='_blank'/></Link >
-                  
               </div>
             </div>
           </div>
         </div>
       </footer>
-
       {/* </div> */}
     </>
 

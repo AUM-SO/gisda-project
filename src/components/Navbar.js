@@ -15,12 +15,16 @@ import Blog from "../components/Blog";
 import About from "../pages/Abouts";
 import Login from "../components/Login";
 import Signup from "../components/Signup";
+
 import ShowDetails from "../pages/showDetails";
+import ShowDetails2 from "../pages/show_mountain2";
+import ShowDetails3 from "../pages/show_Phahinkoob";
+
 import Arcmap from "../components/ArcMap";
 import DetalisBlogs from "../pages/DetalisBlogs";
 import DetalisBlogs2 from "../pages/DetalisBlogs2";
 import DetalisBlogs3 from "../pages/DetalisBlogs3";
-import DetalisBlogs4 from "../pages/DetalisBlogs4";
+/* import DetalisBlogs4 from "../pages/DetalisBlogs4"; */
 
 /* import Icon react */
 import { FaMountain } from "react-icons/fa";
@@ -44,15 +48,15 @@ function Navbar() {
 
   useEffect(() => {
     checkStorage();
-    return () => {};
+    return () => { };
   }, [isLogged]);
   function checkStorage() {
     if (logoutCookies) {
-    //   Swal.fire("Success?", "1", "success");
-    <Avatar icon={<UserOutlined />} />
+      //   Swal.fire("Success?", "1", "success");
+      <Avatar icon={<UserOutlined />} />
       setisLogged(true);
     } else {
-    //   Swal.fire("Success?", "2", "success");
+      //   Swal.fire("Success?", "2", "success");
 
       setisLogged(false);
     }
@@ -61,7 +65,7 @@ function Navbar() {
     // Swal.fire("Success?", "3", "success");
     Cookies.remove("token");
     setisLogged(true);
-    window.location.href="/Login";
+    window.location.href = "/Login";
   };
 
   return (
@@ -98,7 +102,7 @@ function Navbar() {
           </ul>
           <div className="btn_gourp">
             <Link to="/Login">
-            {!isLogged ? (
+              {!isLogged ? (
                 <button className="btnstyle btn_notshow">Login</button>
               ) : (
                 <button className="btnstyle btn_notshow " onClick={logout}>
@@ -109,7 +113,7 @@ function Navbar() {
             <Link to="/Signup">
               <button className="btnstyle btn_notshow">Sign up</button>
             </Link>
-           
+
           </div>
 
           <button
@@ -152,6 +156,7 @@ function Navbar() {
           </ul>
         </div>
       </div>
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Trekking" element={<Trekking />} />
@@ -159,12 +164,16 @@ function Navbar() {
         <Route path="/About" element={<About />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Signup" element={<Signup />} />
+
         <Route path="/ShowDetails" element={<ShowDetails />} />
+        <Route path="/show_mountain2" element={<ShowDetails2 />} />
+        <Route path="/show_Phahinkoob" element={<ShowDetails3 />} />
         <Route path="/Arcmap" element={<Arcmap />} />
+
         <Route path="/DetalisBlogs" element={<DetalisBlogs />} />
         <Route path="/DetalisBlogs2" element={<DetalisBlogs2 />} />
-        <Route path="//DetalisBlogs3" element={<DetalisBlogs3 />} />
-        <Route path="//DetalisBlogs4" element={<DetalisBlogs4 />} />
+        <Route path="/DetalisBlogs3" element={<DetalisBlogs3 />} />
+        
       </Routes>
     </BrowserRouter>
   );

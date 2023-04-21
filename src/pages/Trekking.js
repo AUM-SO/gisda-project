@@ -239,6 +239,71 @@ function Trekking() {
             {/*  พื้นที่แสดง cards */}
             <div className="container_showitem">
               <>
+                <Ripples>
+                  <Link to="/ShowDetails" className="Treak_card">
+                    <div className="textitem">
+                      <h3 /* key={cards.id} */>{/* {cards.title} */} เขาแหลม</h3>
+                      <div className="walk">
+                        <FaWalking id="walkicon" />
+                        <p>{/* {cards.id} */}</p>
+                      </div>
+                      <div className="time">
+                        <RxClock id="Clock" />
+                        <p>{/* {cards.title} */}</p>
+                      </div>
+                    </div>
+                    <img
+                      /* key={cards.id}
+                      src={cards.cover_image} */
+                      src={require("../img/mountain9.jpg")}
+                      className="img_item zoom"
+                    />
+                  </Link>
+                </Ripples>
+                <Ripples>
+                  <Link to="/show_mountain2" className="Treak_card">
+                    <div className="textitem">
+                      <h3 /* key={cards.id} */>{/* {cards.title} */} เขาระเบิด</h3>
+                      <div className="walk">
+                        <FaWalking id="walkicon" />
+                        <p>{/* {cards.id} */}</p>
+                      </div>
+                      <div className="time">
+                        <RxClock id="Clock" />
+                        <p>{/* {cards.title} */}</p>
+                      </div>
+                    </div>
+                    <img
+                      /* key={cards.id}
+                      src={cards.cover_image} */
+                      src={require("../img/mountain6.png")}
+                      className="img_item zoom"
+                    />
+                  </Link>
+                </Ripples>
+                <Ripples>
+                  <Link to="/show_Phahinkoob" className="Treak_card">
+                    <div className="textitem">
+                      <h3 /* key={cards.id} */>{/* {cards.title} */} ผาหินกูบ</h3>
+                      <div className="walk">
+                        <FaWalking id="walkicon" />
+                        <p>{/* {cards.id} */}</p>
+                      </div>
+                      <div className="time">
+                        <RxClock id="Clock" />
+                        <p>{/* {cards.title} */}</p>
+                      </div>
+                    </div>
+                    <img
+                      /* key={cards.id}
+                      src={cards.cover_image} */
+                      src={require("../img/mountain5.jpg")}
+                      className="img_item zoom"
+                    />
+                  </Link>
+                </Ripples>
+
+
                 {posts.length > 0 && (
                   <>
                     {posts.map((cards) => (

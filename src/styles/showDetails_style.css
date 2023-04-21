@@ -28,7 +28,7 @@
 
 
 .container_detils {
-    height: max-content;
+    max-height: 100rem;
     width: 80%;
     margin: 0 auto;
     padding: 2.5rem;

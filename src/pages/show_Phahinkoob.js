@@ -1,8 +1,6 @@
-import React from 'react'
-import '../styles/showDetails_style.css'
 
-import Footer from '../components/Footer'
 
+import '../styles/Arcgis.css'
 /* import react icon */
 import { FiMapPin, FiMap } from 'react-icons/fi'
 import { FaStar, FaWalking, FaHiking, FaGasPump, FaParking } from 'react-icons/fa'
@@ -11,36 +9,12 @@ import { RxClock } from "react-icons/rx"
 import { BiHotel } from "react-icons/bi";
 import { GiMountaintop } from "react-icons/gi";
 
-
 // import ArcMap from '../components/ArcMap'
-import ArcMaps from '../components/ArcMap'
+import ArcMaps from '../components/Phahinkoob'
 import ButtonAcrMap from '../components/ButtonAcrMap'
+import Footer from '../components/Footer'
 
-
-function ShowDetails() {
-  // const [comment, setComment] = useState('');
-
-  // const handleCommentSubmit = (e) => {
-  //   e.preventDefault();
-
-  //   // Create the comment data object
-  //   const commentData = {
-  //     name: 'NameUser', // You can customize this with the user's name or fetch it from an input field
-  //     comment: comment
-  //   };
-
-  //   // Send a POST request to submit the comment
-  //   axios.post('https://trekking.gistda.or.th/api/posts/1/comments/', commentData)
-  //     .then(response => {
-  //       console.log('Comment submitted successfully:', response.data);
-  //       // Reset the comment input field after successful submission
-  //       setComment('');
-  //     })
-  //     .catch(error => {
-  //       console.error('Failed to submit comment:', error);
-  //     });
-  // };
-
+const show_Phahinkoob = () => {
   return (
     <>
       <div className="containershowcard">
@@ -58,10 +32,10 @@ function ShowDetails() {
           <div className="container_data">
             <div className="dataleft">
               <div className="title">
-                <h2 className="nameplace">เขาแหลม</h2>
+                <h2 className="nameplace">ผาหินกูบ</h2>
               </div>
               <div className="locationBox">
-                <FiMapPin className="pinicon" /><p>จังหวัด ตราด</p>
+                <FiMapPin className="pinicon" /><p>จังหวัด จันทบุรี</p>
                 <div className="StarshowDetails">
                   <i><FaStar className="star_plase" /></i>
                   <i><FaStar className="star_plase" /></i>
@@ -72,21 +46,18 @@ function ShowDetails() {
               </div>
               <div className="iconBoxshowdetils">
                 <div className="average_walk">
-                  <FaWalking id='average_walkicon' /><p>ระยะทาง 3.5 กิโลเมตร</p>
+                  <FaWalking id='average_walkicon' /><p>ระยะทาง 7 กิโลเมตร</p>
                 </div>
                 <div className="average_time">
-                  <RxClock id='average_timewalk' /><p>เวลาเฉลี่ย 3 ชม.</p>
+                  <RxClock id='average_timewalk' /><p>เวลาเฉลี่ย 5-6 ชม.</p>
                 </div>
               </div>
               <p className="data_place">
-                หมู่เกาะช้าง จังหวัดตราด แหล่งท่องเที่ยวทางทะเลที่ขึ้นชื่อที่สุดของภาคตะวันออก
-                หมู่เกาะช้างมีเกาะช้างเป็นเกาะที่ใหญ่ที่สุดประกอบด้วยเกาะบริวารมากมาย นักท่องเที่ยว 99.99% มาเที่ยวเกาะช้างลงเล่นน้ำทะเล
-                พักผ่อนรีสอร์ทริมหาด และล่องเรือดำน้ำตามเกาะบริวารต่างๆ ส่วนการเดินขึ้นเขาเพื่อชมวิวบนยอดเขาของเกาะช้าง
-                เป็นเรื่องของการท่องเที่ยวแนวผจญภัยที่เกิดขึ้นเมื่อไม่นานมานี้และแต่ละปีมีคนมาเที่ยวเรียกว่านับจำนวนคนได้ที่จะเดินป่าขึ้นเขา
-                มาชมวิวทิวทัศน์ของหมู่เกาะช้างที่ได้ชื่อว่าเป็น Dream Destination
+              มีป่ามากมายในไทย ไม่ว่าจะเป็น ดอยทู่ ดอยหลวงตาก เขากำแพง เขาหลวงสุโขทัย เขาหลักพัทลุง 
+              ยอดสองนม และหนึ่งในนั้นที่ติดอับดับการเดินป่าอันดับต้นๆ ในไทย ก็คงจะหนีไม่พ้นผาหินกูบ 
+              เนื่องจากผาหินกูบแห่งนี้ได้รับความนิยมและการให้ความสนใจของเหล่านักผจญภัยเป็นอย่างมาก 
+              เพราะให้ความตื่นเต้นในระหว่างทางและได้สัมผัสธรรมชาติอันสวยงามโดยรอบ 
               </p>
-              <p className="data_place">เบอร์โทรสำหรับขออนุญาตกางเต็นท์  </p>
-              <p className="data_place">ติดต่อที่ ครูเปีย : 091-019-8972 , พี่หมวดวัลลภ โทร.0812641264 </p>
             </div>
 
             <div className="dataright">
@@ -95,17 +66,11 @@ function ShowDetails() {
               </div>
 
               <div className="details">
-                <p>การเดินทาง : รถยนต์ส่วนบุคคล,ขึ้นรถ บขส.เอกมัย นั่งรถตู้จากอนุสาวรีย์ฯ</p>
-                <p>ความสูงจากระดับน้ำทะเล: 586 m </p>
-                <p>ค่าบริการท่าเรือเฟอรี่ :  รถยนต์ 4 ล้อ คันละ 120บาท</p>
-                <p>ค่าโดยสารเรือ : 80 บาท ต่อคน</p>
-                <p>การบริการ :
-                  ห้องน้ำ
-                  มีจุดกางเต็นท์
-                  มีร้านคาเฟ่
-                  มีร้านอาหาร
-                  ร้านขายของ
-                </p>
+                <p>การเดินทาง : รถยนต์ส่วนบุคคล</p>
+                <p>ความสูงจากระดับน้ำทะเล: 960  m </p>
+                <p>เวลาทำการ : เฉพาะเสาร์-อาทิตย์ </p>
+                <p>บริการและสิ่งอำนวยความสะดวก: จุดกางเต็นท์ ,ที่จอดรถ, บริการลูกหาบ,มีค่าเข้าอุทยาน</p>
+                <p>เบอร์โทรอุทยาน: 093 989 7273</p>
               </div>
 
               <div className="container_service">
@@ -202,8 +167,10 @@ function ShowDetails() {
         </div>
       </div>
       <Footer />
-    </>
-  )
-}
 
-export default ShowDetails
+    </>
+
+  )
+};
+
+export default show_Phahinkoob
