@@ -31,6 +31,8 @@ import { useEffect } from "react";
 import { getActiveElement } from "@testing-library/user-event/dist/utils";
 import Cookies from "js-cookie";
 import Swal from "sweetalert2";
+import { Avatar } from "antd";
+import { UserOutlined } from "@ant-design/icons";
 
 function Navbar() {
   const [toggle, setToggle] = useState(true);
@@ -46,17 +48,17 @@ function Navbar() {
   }, [isLogged]);
   function checkStorage() {
     if (logoutCookies) {
-      Swal.fire("Success?", "1", "success");
-
+    //   Swal.fire("Success?", "1", "success");
+    <Avatar icon={<UserOutlined />} />
       setisLogged(true);
     } else {
-      Swal.fire("Success?", "2", "success");
+    //   Swal.fire("Success?", "2", "success");
 
       setisLogged(false);
     }
   }
   const logout = () => {
-    Swal.fire("Success?", "3", "success");
+    // Swal.fire("Success?", "3", "success");
     Cookies.remove("token");
     setisLogged(true);
     window.location.href="/Login";

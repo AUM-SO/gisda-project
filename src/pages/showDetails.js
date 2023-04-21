@@ -18,6 +18,29 @@ import ButtonAcrMap from '../components/ButtonAcrMap'
 
 
 function ShowDetails() {
+  // const [comment, setComment] = useState('');
+
+  // const handleCommentSubmit = (e) => {
+  //   e.preventDefault();
+
+  //   // Create the comment data object
+  //   const commentData = {
+  //     name: 'NameUser', // You can customize this with the user's name or fetch it from an input field
+  //     comment: comment
+  //   };
+
+  //   // Send a POST request to submit the comment
+  //   axios.post('https://trekking.gistda.or.th/api/posts/1/comments/', commentData)
+  //     .then(response => {
+  //       console.log('Comment submitted successfully:', response.data);
+  //       // Reset the comment input field after successful submission
+  //       setComment('');
+  //     })
+  //     .catch(error => {
+  //       console.error('Failed to submit comment:', error);
+  //     });
+  // };
+
   return (
     <>
       <div className="containershowcard">
@@ -116,7 +139,7 @@ function ShowDetails() {
               </div>
 
             </div>
-            <form action="" className='formcomment' method="get">
+            <form action="" className='formcomment'onChange={handleCommentSubmit}>
               <input type="text" name="" id="" className='commentinput' placeholder='แสดงความคิด' />
               <button type='submit' className=" stylebtn_comment" id='' name=''>comment</button>
             </form>

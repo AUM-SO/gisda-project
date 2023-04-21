@@ -11,7 +11,7 @@ function Login() {
     email: "",
     password: "",
   });
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const onChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -26,14 +26,15 @@ function Login() {
           {
             auth: {
               username: formData.email,
-              password: formData.password
-            }
+              password: formData.password,
+            },
           }
         );
-        if (res.token) {
+        if (res.data.token) {
+          Cookies.set("token", res.data.token);
           Swal.fire("Success?", "Login Successful", "success");
-          navigate("/");
-          Cookies.set("token", res.token);
+          // navigate("/");
+          window.location.href="/";
         } else {
           Swal.fire("Error?", res.detail || "Server Error", "error");
         }
