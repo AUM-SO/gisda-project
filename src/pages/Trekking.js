@@ -97,6 +97,7 @@ function Trekking() {
   const btnfilter = () => {
       setToggle(!toggle)
   }; */
+  
   const navRef = useRef();
 
   const showNavbar = () => {

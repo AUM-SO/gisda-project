@@ -201,10 +201,9 @@ p {
 }
 
 .imgincard {
-    max-height: 15rem;
+    max-height: 300px;
     width: 100%;
     display: flex;
-
     overflow: hidden;
     background-color: #81808060;
 }
@@ -597,7 +596,6 @@ p {
 
 
     .imgincard {
-        height:max-content;
         width: 100%;
     }
 
@@ -625,13 +623,12 @@ p {
     .p_card {
         max-width: 100%;
         font-size: 14px;
-
+        font-family: 'Kanit', sans-serif;
         overflow: hidden;
         /*การซ่อนเนื้อหาด้วย overflow:hidden*/
         line-height: 14pt;
-        /*การซ่อนเนื้อหาด้วย overflow:hidden*/
         height: 56pt;
-        /*การซ่อนเนื้อหาด้วย overflow:hidden*/
+        
 
     }
 
